@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// import React from "react";
+import ReactDOM from "react-dom/client";
+import { HashRouter as Router, Routes, Route } from 'react-router';
+import ScrollToTop from "./utils/ScrollToTop";
+import Home from "./pages/Home";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <Router>
+    <ScrollToTop />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      {/* <Route element={<LayoutArticle />}>
+        <Route path="intro" element={<Intro />} />
+        <Route path="depart" element={<Depart />} />
+      </Route> */}
+    </Routes>
+  </Router>
 )
