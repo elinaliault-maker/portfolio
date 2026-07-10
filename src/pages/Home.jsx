@@ -3,16 +3,16 @@
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 // import './App.css'
-import '../tailwind-import.css'
-import '../index.css'
-import Header from "../components/Header"
+// import '../tailwind-import.css'
+// import '../index.css'
+// import Header from "../components/Header"
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
       <h1>home</h1>
     </>
   )
