@@ -14,15 +14,18 @@ function HeaderLink({ text, url }) {
 
 export default function Header() {
     return (
-        <div className="flex gap-8 justify-center items-center">
-            
-            <HeaderLink text="Projets" url="/projets" />
-            <HeaderLink text={"Garden"} url={"/garden"} />
-            <Link to="/" className='back-home'>
-                <img src={Logo} alt="Logo" className="w-20" />
-            </Link>
-            <HeaderLink text={"About"} url={"/about"} />
-            <HeaderLink text={"Contact"} url={"/contact"} />
+        <div className="header grid grid-cols-2 justify-center items-center w-auto my-1">
+            <div className="w-max">
+                 <Link to="/">
+                    <img src={Logo} alt="Logo" className="w-20" />
+                </Link>
+            </div>
+            <div className="flex gap-8 justify-end items-center w-auto">
+                <HeaderLink text="Projets" url="/projets" />
+                <HeaderLink text={"Garden"} url={"/garden"} />
+                <HeaderLink text={"About"} url={"/about"} />
+                <HeaderLink text={"Contact"} url={"/contact"} />
+            </div>
         </div>
     )
 }
