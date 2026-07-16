@@ -22,7 +22,7 @@ export default function Header() {
             <div className="flex gap-8 justify-end items-center">
                 <HeaderLink text={"Projets"} url={"/projets"} />
                 {/* <HeaderLink text={"Crafts"} url={"/crafts"} /> */}
-                <HeaderLink text={"About"} url={"/about"} />
+                <HeaderLink text={"À propos"} url={"/about"} />
                 <HeaderLink text={"Contact"} url={"/contact"} />
             </div>
         </nav>
