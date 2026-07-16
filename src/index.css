@@ -2,13 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap'); 
+@font-face {
+  font-family: Winkle; 
+  src: url(assets/typo/Winkle-Regular.ttf);
+}
 
 /* ROOT */
 :root {
   --violet: #935CC7;
   --bleu-clair: #5C6AC7;
   --bleu-fonce: #2E0073;
-  --text: #12002E;
+  --text: #160038;
   --text-h: var(--bleu-fonce);
   --bg: #FDFAF7;
   --border: #F8EDE2;
@@ -19,6 +24,7 @@
   --sans: "Poppins", sans-serif;
   --heading: "Caprasimo", serif;
   --mono: "Space Mono", monospace; /* pour le code...  */
+  --handwritten: Winkle, "Patrick Hand", cursive;
 
   font: 1rem var(--sans);
   letter-spacing: 0.02rem;
