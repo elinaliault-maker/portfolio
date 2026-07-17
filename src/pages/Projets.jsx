@@ -11,7 +11,8 @@ function ProjectBlock ({ coverUrl, title, types }) {
                     transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
             </div>
-            <h2 className="text-left m-0 text-(--bleu-clair) group-hover:text-(--violet)">{title}</h2>
+            <h2 className="text-left m-0 text-(--bleu-clair) 
+            transition-colors duration-300 group-hover:text-(--violet)">{title}</h2>
             {/* Loop through each type to create individual tags */}
             <div className="flex flex-wrap gap-2">
                 {types.map((type, tagIndex) => (
@@ -19,7 +20,7 @@ function ProjectBlock ({ coverUrl, title, types }) {
                         key={tagIndex} 
                         className="px-2 py-1 text-xs font-medium rounded-[0.5rem] 
                         border border-(--blue-clair) text-(--bleu-clair) 
-                        group-hover:border-(--violet) group-hover:text-(--violet)"
+                        transition-all duration-300 group-hover:border-(--violet) group-hover:text-(--violet)"
                     >
                         {type}
                     </span>
