@@ -1,0 +1,14 @@
+[
+    {
+        "projectNumber": 1,
+        "coverUrl": "/projectsAssets/coverExemple.webp",
+        "title": "Exemple",
+        "types": ["UI", "UX"]
+    },
+    {
+        "projectNumber": 2,
+        "coverUrl": "/projectsAssets/cover2.jpg",
+        "title": "Exemple2",
+        "types": ["UI", "UX design"]
+    }
+]

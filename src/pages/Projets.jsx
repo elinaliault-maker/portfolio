@@ -1,7 +1,49 @@
-export default function Projets() {
+import ContentProjects from "../content/projets-fr.json"
+
+// Component to render a single project
+function ProjectBlock ({ coverUrl, title, types }) {
+    return (
+        <div className="group flex flex-col gap-2 justify-start cursor-pointer">
+            <div className="w-auto h-60 rounded-[0.5rem] overflow-hidden">
+                <div 
+                    style={{ backgroundImage: `url(${coverUrl})` }} 
+                    className="w-full h-full bg-cover bg-center 
+                    transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
+            </div>
+            <h2 className="text-left m-0 text-(--bleu-clair) group-hover:text-(--violet)">{title}</h2>
+            {/* Loop through each type to create individual tags */}
+            <div className="flex flex-wrap gap-2">
+                {types.map((type, tagIndex) => (
+                    <span 
+                        key={tagIndex} 
+                        className="px-2 py-1 text-xs font-medium rounded-[0.5rem] 
+                        border border-(--blue-clair) text-(--bleu-clair) 
+                        group-hover:border-(--violet) group-hover:text-(--violet)"
+                    >
+                        {type}
+                    </span>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default function Projects() {
     return (
         <>
             <h1>Projets</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Mapping over the JSON array to generate a block for each project */}
+                {ContentProjects.map((project) => (
+                    <ProjectBlock 
+                        key={project.projectNumber} // Always provide a unique key in React lists
+                        coverUrl={project.coverUrl} 
+                        title={project.title} 
+                        types={project.types} 
+                    />
+                ))}
+            </div>
         </>
     )
 }

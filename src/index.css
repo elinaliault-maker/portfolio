@@ -81,12 +81,11 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
-  letter-spacing: -0.05rem;
+  line-height: 118%;
 }
-
 h1 {
   font-size: 3rem;
+  color: var(--text-h);
   margin: 2rem 0;
   @media (max-width: 1024px) {
     font-size: 2.5rem;
@@ -95,8 +94,8 @@ h1 {
 }
 h2 {
   font-size: 1.5rem;
-  line-height: 118%;
-  margin: 0 0 0.5rem;
+  /* color: var(--bleu-clair); */
+  /* margin: 0 0 0.5rem; */
   @media (max-width: 1024px) {
     font-size: 1.25rem;
   }
