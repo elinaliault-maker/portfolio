@@ -1,6 +1,7 @@
 [
     {
         "projectNumber": 1,
+        "url": "exemple",
         "coverUrl": "/projectsAssets/coverExemple.webp",
         "title": "Exemple",
         "detail": "Liasse 360, 2026",
@@ -8,6 +9,7 @@
     },
     {
         "projectNumber": 2,
+        "url": "ex2",
         "coverUrl": "/projectsAssets/cover2.jpg",
         "title": "Exemple2",
         "detail": "MAIF, 2022",

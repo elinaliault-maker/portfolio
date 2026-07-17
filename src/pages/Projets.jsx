@@ -1,11 +1,15 @@
+import { Link } from "react-router"
 import ContentProjects from "../content/projets-fr.json"
 import List from "../components/List"
 import PageTitleWithIcons from "../components/PageTitleWithIcons"
 
 // Component to render a single project
-function ProjectBlock ({ coverUrl, title, detail, types }) {
+function ProjectBlock ({ projectUrl, coverUrl, title, detail, types }) {
     return (
-        <div className="group flex flex-col gap-2 justify-start cursor-pointer">
+        <Link 
+            to={`/projets/${projectUrl}`}
+            className="group flex flex-col gap-2 justify-start cursor-pointer no-underline text-inherit"
+        >
             <div className="w-auto h-60 rounded-[0.5rem] overflow-hidden">
                 <div 
                     style={{ backgroundImage: `url(${coverUrl})` }} 
@@ -29,7 +33,7 @@ function ProjectBlock ({ coverUrl, title, detail, types }) {
                     </span>
                 ))}
             </div>
-        </div>
+        </Link>
     )
 }
 
@@ -42,6 +46,7 @@ export default function Projects() {
                 {ContentProjects.map((project) => (
                     <ProjectBlock 
                         key={project.projectNumber} // Always provide a unique key in React lists
+                        projectUrl={project.url}
                         coverUrl={project.coverUrl} 
                         title={project.title} 
                         detail={project.detail}
