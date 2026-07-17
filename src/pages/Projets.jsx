@@ -1,8 +1,9 @@
 import ContentProjects from "../content/projets-fr.json"
 import List from "../components/List"
+import PageTitleWithIcons from "../components/PageTitleWithIcons"
 
 // Component to render a single project
-function ProjectBlock ({ coverUrl, title, types }) {
+function ProjectBlock ({ coverUrl, title, detail, types }) {
     return (
         <div className="group flex flex-col gap-2 justify-start cursor-pointer">
             <div className="w-auto h-60 rounded-[0.5rem] overflow-hidden">
@@ -14,7 +15,7 @@ function ProjectBlock ({ coverUrl, title, types }) {
             </div>
             <h2 className="text-left m-0 text-(--bleu-clair) 
             transition-colors duration-300 group-hover:text-(--violet)">{title}</h2>
-            <List textArray={["MAIF, 2022"]} />
+            <List textArray={[detail]} />
             {/* Loop through each type to create individual tags */}
             <div className="flex flex-wrap gap-2">
                 {types.map((type, tagIndex) => (
@@ -35,7 +36,7 @@ function ProjectBlock ({ coverUrl, title, types }) {
 export default function Projects() {
     return (
         <>
-            <h1>Projets</h1>
+            <PageTitleWithIcons text={"Projets"} />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Mapping over the JSON array to generate a block for each project */}
                 {ContentProjects.map((project) => (
@@ -43,6 +44,7 @@ export default function Projects() {
                         key={project.projectNumber} // Always provide a unique key in React lists
                         coverUrl={project.coverUrl} 
                         title={project.title} 
+                        detail={project.detail}
                         types={project.types} 
                     />
                 ))}

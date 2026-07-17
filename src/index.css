@@ -7,6 +7,7 @@
   font-family: Winkle; 
   src: url(assets/typo/Winkle-Regular.ttf);
 }
+/* font-icons */
 @font-face {
   font-family: 'PortfolioIcons';
   src: url('./assets/typo/icons-portfolio-el.woff2') format('woff2');
@@ -14,7 +15,6 @@
   font-style: normal;
   font-display: block; /* Prevents the 'invisible text' glitch while loading */
 }
-/* helper utility class */
 .font-icon {
   font-family: 'PortfolioIcons' !important;
   font-style: normal;
@@ -111,8 +111,6 @@ h1 {
 }
 h2 {
   font-size: 1.5rem;
-  /* color: var(--bleu-clair); */
-  /* margin: 0 0 0.5rem; */
   @media (max-width: 1024px) {
     font-size: 1.25rem;
   }
@@ -131,4 +129,22 @@ code {
   line-height: 135%;
   padding: 0.25rem 0.5rem;
   background: var(--code-bg);
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }
