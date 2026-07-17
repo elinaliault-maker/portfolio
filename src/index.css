@@ -7,6 +7,23 @@
   font-family: Winkle; 
   src: url(assets/typo/Winkle-Regular.ttf);
 }
+@font-face {
+  font-family: 'PortfolioIcons';
+  src: url('./assets/typo/icons-portfolio-el.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; /* Prevents the 'invisible text' glitch while loading */
+}
+/* helper utility class */
+.font-icon {
+  font-family: 'PortfolioIcons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
 
 /* ROOT */
 :root {

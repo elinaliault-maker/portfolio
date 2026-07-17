@@ -1,4 +1,5 @@
 import ContentProjects from "../content/projets-fr.json"
+import List from "../components/List"
 
 // Component to render a single project
 function ProjectBlock ({ coverUrl, title, types }) {
@@ -13,13 +14,14 @@ function ProjectBlock ({ coverUrl, title, types }) {
             </div>
             <h2 className="text-left m-0 text-(--bleu-clair) 
             transition-colors duration-300 group-hover:text-(--violet)">{title}</h2>
+            <List textArray={["MAIF, 2022"]} />
             {/* Loop through each type to create individual tags */}
             <div className="flex flex-wrap gap-2">
                 {types.map((type, tagIndex) => (
                     <span 
                         key={tagIndex} 
                         className="px-2 py-1 text-xs font-medium rounded-[0.5rem] 
-                        border border-(--blue-clair) text-(--bleu-clair) 
+                        border border-(--blue-clair) text-(--text) 
                         transition-all duration-300 group-hover:border-(--violet) group-hover:text-(--violet)"
                     >
                         {type}
