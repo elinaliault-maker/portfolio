@@ -1,22 +1,14 @@
-// export default function DetailProject() {
-//     return (
-//         <h1>Details</h1>
-//     )
-// }
-
 import { useParams, Link } from "react-router";
 import ContentProjets from "../content/projets-fr.json";
 
 export default function DetailProject() {
-    // 1. Grab the ':id' out of the current URL string
+    // 1. Grab the ':projetUrl' out of the current URL string
     const { projetUrl } = useParams();
 
-    // 2. Find the object in your JSON array that matches this ID
-    // Note: useParams returns a string, so we convert project.projetNombre to a string to match perfectly
+    // 2. Find the object in your JSON array that matches this URL
     const project = ContentProjets.find(p => p.url === projetUrl);
-    console.log(project)
 
-    // 3. Handle 404 if someone types an ID that doesn't exist in the JSON
+    // 3. Handle 404 if someone types an URL that doesn't exist in the JSON
     if (!project) {
         return (
             <div className="p-6 text-center">
