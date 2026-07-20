@@ -12,7 +12,7 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
             to={`/${langUrl}/projets/${projectUrl}`}
             className="group flex flex-col gap-2 justify-start cursor-pointer no-underline text-inherit"
         >
-            <div className="w-auto h-60 rounded-[0.5rem] overflow-hidden">
+            <div className="w-auto h-60 rounded-lg overflow-hidden">
                 <div 
                     style={{ backgroundImage: `url(${coverUrl})` }} 
                     className="w-full h-full bg-cover bg-center 
@@ -27,7 +27,7 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
                 {types.map((type, tagIndex) => (
                     <span 
                         key={tagIndex} 
-                        className="px-2 py-1 text-xs font-medium rounded-[0.5rem] 
+                        className="px-2 py-1 text-xs font-medium rounded-lg 
                         border border-(--blue-clair) text-(--text) 
                         transition-all duration-300 group-hover:border-(--violet) group-hover:text-(--violet)"
                     >

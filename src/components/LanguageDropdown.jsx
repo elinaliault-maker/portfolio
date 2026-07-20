@@ -44,7 +44,7 @@ export function LanguageDropdown() {
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Change Language"
-                className="w-8 h-6 rounded-[6px] bg-(--bg) border-2 border-(--bleu-fonce)/16 hover:border-(--bleu-clair) transition-all duration-300 cursor-pointer flex items-center justify-center overflow-hidden focus:outline-none focus:ring-2 focus:ring-(--bleu-fonce)"
+                className="w-8 h-6 rounded-md bg-(--bg) border-2 border-(--bleu-fonce)/16 hover:border-(--bleu-clair) transition-all duration-300 cursor-pointer flex items-center justify-center overflow-hidden focus:outline-none focus:ring-2 focus:ring-(--bleu-fonce)"
             >
                 <img 
                     src={flags[currentLang]?.src} 
@@ -64,7 +64,7 @@ export function LanguageDropdown() {
                             <button
                                 key={key}
                                 onClick={() => handleSelect(key)}
-                                className={`flex items-center gap-1.75 w-full px-2 py-1.5 text-sm font-semibold rounded-[8px] transition-all cursor-pointer ${
+                                className={`flex items-center gap-1.75 w-full px-2 py-1.5 text-sm font-semibold rounded-lg transition-all cursor-pointer ${
                                     isSelected 
                                         ? 'bg-(--bleu-clair) text-(--bg)' 
                                         : 'text-(--text) hover:bg-(--bleu-clair)/16'
@@ -74,7 +74,7 @@ export function LanguageDropdown() {
                                 <img 
                                     src={flags[key].src} 
                                     alt="" 
-                                    className="w-7 h-5 rounded-[6px] object-cover border border-(--bleu-fonce)/10 flex-shrink-0" 
+                                    className="w-7 h-5 rounded-md object-cover border border-(--bleu-fonce)/10 shrink-0" 
                                 />
                                 <span className="flex-1 text-left">{flags[key].name}</span>
                             </button>

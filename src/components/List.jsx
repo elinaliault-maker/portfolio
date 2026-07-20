@@ -2,7 +2,7 @@ function ListSimple({text}) {
     return (
         <div className="flex items-baseline gap-1.5 text-left text-sm text-(--text)">
                 <span 
-                    className="font-icon flex-shrink-0  text-[0.5rem]
+                    className="font-icon shrink-0  text-[0.5rem]
                     group-hover:text-(--violet) group-hover:translate-x-0.5 transition-all duration-300"
                     aria-hidden="true"
                 >
