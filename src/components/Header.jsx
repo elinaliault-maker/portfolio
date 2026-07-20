@@ -1,5 +1,8 @@
 import { NavLink, Link } from "react-router";
+import { useParams } from "react-router";
+import { getUiTranslation } from "../utils/getUiTranslation";
 import Logo from "../assets/logo-portfolio-el.svg"
+import { LanguageDropdown } from "./LanguageDropdown";
 
 function HeaderLink({ text, url }) {
     return (
@@ -13,6 +16,8 @@ function HeaderLink({ text, url }) {
 }
 
 export default function Header() {
+    const { lang } = useParams(); // Current language ('fr' or 'en')
+    const t = getUiTranslation(lang);
     return (
         <nav className="grid grid-cols-2 justify-center items-center my-1">
             <Link to="/">
@@ -20,10 +25,11 @@ export default function Header() {
             </Link>
            
             <div className="flex gap-8 justify-end items-center">
-                <HeaderLink text={"Projets"} url={"/projets"} />
-                {/* <HeaderLink text={"Crafts"} url={"/crafts"} /> */}
-                <HeaderLink text={"À propos"} url={"/about"} />
-                <HeaderLink text={"Contact"} url={"/contact"} />
+                <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} />
+                {/* <HeaderLink text={t.nav.crafts} url={`/${lang}/crafts`} /> */}
+                <HeaderLink text={t.nav.about} url={`/${lang}/about`} />
+                <HeaderLink text={t.nav.contact} url={`/${lang}/contact`} />
+                <LanguageDropdown />
             </div>
         </nav>
     )

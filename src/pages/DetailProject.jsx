@@ -1,19 +1,22 @@
 import { useParams, Link } from "react-router";
-import ContentProjets from "../content/projets-fr.json";
+// import ContentProjets from "../content/projets-fr.json";
+import { getProjects } from "../utils/getProjects";
 
 export default function DetailProject() {
     // 1. Grab the ':projetUrl' out of the current URL string
-    const { projetUrl } = useParams();
+    const { lang, projetUrl } = useParams();
 
+    // Load the correct JSON file based on the URL language
+    const projects = getProjects(lang);
     // 2. Find the object in your JSON array that matches this URL
-    const project = ContentProjets.find(p => p.url === projetUrl);
+    const project = projects.find(p => p.url === projetUrl);
 
     // 3. Handle 404 if someone types an URL that doesn't exist in the JSON
     if (!project) {
         return (
             <div className="p-6 text-center">
                 <h2>Projet introuvable</h2>
-                <Link to="/projets" className="text-blue-500 underline">Retourner aux projets</Link>
+                <Link to={`/${lang}/projets`} className="text-blue-500 underline">Retourner aux projets</Link>
             </div>
         );
     }
@@ -21,7 +24,7 @@ export default function DetailProject() {
     // 4. Render your page fully dynamic from the found project data!
     return (
         <div className="max-w-4xl mx-auto p-6">
-            <Link to="/projets" className="text-sm text-gray-500 hover:underline mb-6 inline-block">
+            <Link to={`/${lang}/projets`} className="text-sm text-gray-500 hover:underline mb-6 inline-block">
                 &larr; Retour aux projets
             </Link>
 

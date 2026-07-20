@@ -1,0 +1,18 @@
+[
+    {
+        "projectNumber": 1,
+        "url": "exemple",
+        "coverUrl": "/projectsAssets/coverExemple.webp",
+        "title": "English",
+        "detail": "Liasse 360, 2026",
+        "types": ["UI", "UX"]
+    },
+    {
+        "projectNumber": 2,
+        "url": "ex2",
+        "coverUrl": "/projectsAssets/cover2.jpg",
+        "title": "English2",
+        "detail": "MAIF, 2022",
+        "types": ["UI", "UX design"]
+    }
+]

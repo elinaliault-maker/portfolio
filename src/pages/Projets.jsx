@@ -1,13 +1,15 @@
-import { Link } from "react-router"
-import ContentProjects from "../content/projets-fr.json"
+import { useParams, Link } from "react-router"
+// import ContentProjects from "../content/projets-fr.json"
+import { getProjects } from "../utils/getProjects"
+import { getUiTranslation } from "../utils/getUiTranslation"
 import List from "../components/List"
 import PageTitleWithIcons from "../components/PageTitleWithIcons"
 
 // Component to render a single project
-function ProjectBlock ({ projectUrl, coverUrl, title, detail, types }) {
+function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) {
     return (
         <Link 
-            to={`/projets/${projectUrl}`}
+            to={`/${langUrl}/projets/${projectUrl}`}
             className="group flex flex-col gap-2 justify-start cursor-pointer no-underline text-inherit"
         >
             <div className="w-auto h-60 rounded-[0.5rem] overflow-hidden">
@@ -38,14 +40,21 @@ function ProjectBlock ({ projectUrl, coverUrl, title, detail, types }) {
 }
 
 export default function Projects() {
+    // 1. Grab current language from URL
+    const { lang } = useParams();
+    // 2. Get the correct JSON array
+    const t = getUiTranslation(lang);
+    const projects = getProjects(lang);
+
     return (
         <>
-            <PageTitleWithIcons text={"Projets"} />
+            <PageTitleWithIcons text={t.pagesTitle.projects} />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Mapping over the JSON array to generate a block for each project */}
-                {ContentProjects.map((project) => (
+                {projects.map((project) => (
                     <ProjectBlock 
                         key={project.projectNumber} // Always provide a unique key in React lists
+                        langUrl={lang}
                         projectUrl={project.url}
                         coverUrl={project.coverUrl} 
                         title={project.title} 

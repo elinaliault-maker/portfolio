@@ -1,21 +1,14 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-// import './App.css'
-// import '../tailwind-import.css'
-// import '../index.css'
-// import Header from "../components/Header"
+import { useParams } from "react-router"
+import { getUiTranslation } from "../utils/getUiTranslation"
 import PageTitleWithIcons from "../components/PageTitleWithIcons"
 
-function App() {
-  // const [count, setCount] = useState(0)
+export default function Home() {
+  const { lang } = useParams();
+  const t = getUiTranslation(lang);
 
   return (
     <>
-      <PageTitleWithIcons text={"Home"} />
+      <PageTitleWithIcons text={t.pagesTitle.home} />
     </>
   )
 }
-
-export default App

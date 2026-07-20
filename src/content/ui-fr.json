@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "projects": "Projets",
+    "crafts": "Créations",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "pagesTitle": {
+    "home": "Accueil",
+    "projects": "Mes Projets",
+    "about": "À propos de moi"
+  }
+}

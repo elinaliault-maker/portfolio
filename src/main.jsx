@@ -1,11 +1,15 @@
 // import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter as Router, Routes, Route } from 'react-router';
+import { Navigate } from "react-router";
 import ScrollToTop from "./utils/ScrollToTop";
+import RootRedirect from "./utils/RootRedirect";
 import LayoutPage from "./pages/LayoutPage";
+import LanguageWrapper from "./pages/LanguageWrapper";
 import Home from "./pages/Home";
 import Projets from "./pages/Projets"
 import DetailProject from "./pages/DetailProject";
+
 
 const root = document.getElementById("root");
 
@@ -13,11 +17,17 @@ ReactDOM.createRoot(root).render(
   <Router>
     <ScrollToTop />
     <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
       <Route element={<LayoutPage />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/projets" element={<Projets />} />
-        <Route path="/projets/:projetUrl" element={<DetailProject />} />
+        {/* 1. If someone visits the root '/', redirect based on localStorage or default to 'fr' */}
+        <Route path="/" element={<RootRedirect />} />
+        {/* Language-prefixed routes */}
+        <Route path="/:lang" element={<LanguageWrapper />} >
+          <Route path="/:lang/" element={<Home />} />
+          <Route path="/:lang/projets" element={<Projets />} />
+          <Route path="/:lang/projets/:projetUrl" element={<DetailProject />} />
+        </Route>
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/fr" replace />} />
       </Route>
     </Routes>
   </Router>
