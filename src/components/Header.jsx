@@ -19,7 +19,7 @@ export default function Header() {
     const { lang } = useParams(); // Current language ('fr' or 'en')
     const t = getUiTranslation(lang);
     return (
-        <nav className="grid grid-cols-2 justify-center items-center my-1">
+        <nav className="sticky top-0 z-100 grid grid-cols-2 justify-center items-center py-1 bg-(--bg)">
             <Link to="/">
                 <img src={Logo} alt="Logo" className="w-20" />
             </Link>
