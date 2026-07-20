@@ -1,7 +1,6 @@
 // import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter as Router, Routes, Route } from 'react-router';
-import { Navigate } from "react-router";
 import ScrollToTop from "./utils/ScrollToTop";
 import RootRedirect from "./utils/RootRedirect";
 import LayoutPage from "./pages/LayoutPage";
@@ -9,6 +8,8 @@ import LanguageWrapper from "./pages/LanguageWrapper";
 import Home from "./pages/Home";
 import Projets from "./pages/Projets"
 import DetailProject from "./pages/DetailProject";
+import About from "./pages/About";
+import Contact from "./pages/Contact"
 
 
 const root = document.getElementById("root");
@@ -25,9 +26,11 @@ ReactDOM.createRoot(root).render(
           <Route path="/:lang/" element={<Home />} />
           <Route path="/:lang/projets" element={<Projets />} />
           <Route path="/:lang/projets/:projetUrl" element={<DetailProject />} />
+          <Route path="/:lang/about" element={<About />} />
+          <Route path="/:lang/contact" element={<Contact />} />
         </Route>
         {/* Fallback */}
-        <Route path="*" element={<Navigate to="/fr" replace />} />
+        <Route path="*" element={<RootRedirect />} />
       </Route>
     </Routes>
   </Router>
