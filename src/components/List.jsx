@@ -18,7 +18,7 @@ function ListSimple({text}) {
 
 export default function List({textArray}) {
    return (
-        <div className="flex flex-col gap-0.75">
+        <div className="group flex flex-col gap-0.75">
             {textArray.map((textList, i) => (
                 <ListSimple text={textList} key={i} />
             ))}
