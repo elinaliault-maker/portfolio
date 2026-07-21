@@ -19,8 +19,8 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
                     transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
             </div>
-            <h2 className="text-left m-0 text-(--bleu-clair) 
-            transition-colors duration-300 group-hover:text-(--violet)">{title}</h2>
+            <h3 className="text-left m-0 text-(--bleu-clair) 
+            transition-colors duration-300 group-hover:text-(--violet)">{title}</h3>
             <List textArray={[detail]} />
             {/* Loop through each type to create individual tags */}
             <div className="flex flex-wrap gap-2">

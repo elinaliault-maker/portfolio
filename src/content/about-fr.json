@@ -1,0 +1,38 @@
+{
+  "presentation": {
+    "title": "Elina Liault",
+    "paragraphs": ["designer digital et graphique", "...", "..."]
+  },
+  "work": {
+    "title": "Expériences",
+    "content": [
+    {
+      "id": 1,
+      "company": "Liasse 360",
+      "role": "UX/UI Designer",
+      "date": "Septembre 2024 - Août 2026",
+      "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication."
+    },
+    {
+      "id": 2,
+      "company": "MAIF",
+      "role": "UI Designer",
+      "date": "Mai - Juillet 2023",
+      "description": "Gestion de librairies de pictogrammes et de composants. Maquettage d'email commerciaux."
+    },
+    {
+      "id": 3,
+      "company": "Meubles CELIO",
+      "role": "Designer graphique",
+      "date": "Juillet 2022",
+      "description": "Maquettage de goodies et de posts pour les réseaux sociaux. Réalisation de mockups des espace de la marque."
+    },
+    {
+      "id": 4,
+      "company": "Mairie de Niort",
+      "role": "Designer graphique",
+      "date": "Juin 2022",
+      "description": "Création d'une charte graphique pour un service interne. Mise en page de la newsletter, d'affiches et de documents internes."
+    }
+  ]}
+}

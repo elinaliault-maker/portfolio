@@ -1,0 +1,38 @@
+{
+  "presentation": {
+    "title": "Elina Liault",
+    "paragraphs": ["digital and graphic designer", "...", "..."]
+  },
+  "work": {
+    "title": "Work experience",
+    "content": [{
+        "id": 1,
+        "company": "Liasse 360",
+        "role": "UX/UI Designer",
+        "date": "September 2024 - August 2026",
+        "description": "Supporting the product development by designing the software's user interface and creating communication visuals."
+        },
+        {
+        "id": 2,
+        "company": "MAIF",
+        "role": "UI Designer",
+        "date": "Mai - July 2023",
+        "description": "Participating to the design system's icon and component libraries. Designing marketing emails."
+        },
+        {
+        "id": 3,
+        "company": "Meubles CELIO",
+        "role": "Graphic Designer",
+        "date": "July 2022",
+        "description": "Creating mockups for promotional items and the brand's spaces. Designing social media posts."
+        },
+        {
+        "id": 4,
+        "company": "Mairie de Niort",
+        "role": "Graphic Designer",
+        "date": "June 2022",
+        "description": "Creation of a visual identity for an internal department. Designing the newsletter, posters, and internal documents."
+    }]
+  }
+  
+}

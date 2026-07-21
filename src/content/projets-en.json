@@ -2,10 +2,10 @@
     {
         "projectNumber": 1,
         "url": "exemple",
-        "coverUrl": "/projectsAssets/coverExemple.webp",
-        "title": "English",
+        "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
+        "title": "A communicative software",
         "detail": "Liasse 360, 2026",
-        "types": ["UI", "UX"]
+        "types": ["SaaS", "UI", "UX"]
     },
     {
         "projectNumber": 2,

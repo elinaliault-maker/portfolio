@@ -32,7 +32,7 @@
   --bleu-fonce: #2E0073;
   --text: #160038;
   --text-h: var(--bleu-fonce);
-  --bg: #FDFAF7;
+  --bg: #FAFAFA;
   --border: #F8EDE2;
   --code-bg: #F8EDE2;
   --shadow:
@@ -42,6 +42,7 @@
   --heading: "Caprasimo", serif;
   --mono: "Space Mono", monospace; /* pour le code...  */
   --handwritten: Winkle, "Patrick Hand", cursive;
+    /* --heading: var(--handwritten); */
 
   font: 1rem var(--sans);
   letter-spacing: 0.02rem;
@@ -94,8 +95,7 @@ body::selection {
   flex-direction: column;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading);
   font-weight: 500;
   line-height: 118%;
@@ -110,9 +110,25 @@ h1 {
   }
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   @media (max-width: 1024px) {
     font-size: 1.25rem;
+  }
+}
+h3, h4 {
+  font-family: var(--sans);
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.25rem;
+  @media (max-width: 1024px) {
+    font-size: 1.125rem;
+  }
+}
+h4 {
+  font-size: 1.125rem;
+  @media (max-width: 1024px) {
+    font-size: 1.025rem;
   }
 }
 p {
@@ -142,9 +158,9 @@ code {
   to { transform: rotate(360deg); }
 }
 
-.animate-float {
+/* .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
-}
+} */
