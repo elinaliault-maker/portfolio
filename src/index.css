@@ -29,14 +29,14 @@
 :root {
   --violet: #935CC7;
   --bleu-clair: #5C6AC7;
-  --bleu-fonce: #2E0073;
+  --bleu-fonce: #FAFAFA;
   --text: #160038;
   --text-h: var(--bleu-fonce);
   --bg: #FAFAFA;
   --border: #F8EDE2;
   --code-bg: #F8EDE2;
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.2) 0 10px 15px -3px, rgba(0, 0, 0, 0.2) 0 10px 15px 3px;
 
   --sans: "Poppins", sans-serif;
   --heading: "Caprasimo", serif;
@@ -86,14 +86,17 @@ body::selection {
   background-color: var(--bleu-fonce);
 }
 
-#root {
+/* #root {
+  min-height: 100vh;
+} */
+/* #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
-}
+} */
 
 h1, h2 {
   font-family: var(--heading);
@@ -102,8 +105,8 @@ h1, h2 {
 }
 h1 {
   font-size: 3rem;
-  color: var(--text-h);
-  margin: 2rem 0;
+  /* color: var(--text-h); */
+  /* margin: 2rem 0; */
   @media (max-width: 1024px) {
     font-size: 2.5rem;
     margin: 1.5rem 0;

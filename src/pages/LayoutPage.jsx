@@ -6,9 +6,11 @@ import '../index.css'
 export default function LayoutPage() {
   return (
     <>
-    <div className='general'>
+    <div className="m-0 min-h-screen text-center
+    flex flex-col items-center
+    bg-[url(/texture/paper-blue.png)] bg-center bg-repeat">
       <Header />
-      <main className="page">
+      <main className="w-282">
         <Outlet />
       </main>
     </div>
