@@ -4,18 +4,20 @@ import { getUiTranslation } from "../utils/getUiTranslation";
 import Logo from "../assets/logo-portfolio-el.svg"
 import { LanguageDropdown } from "./LanguageDropdown";
 
-function HeaderLink({ text, url }) {
+function HeaderLink({ text, url, isLight }) {
+    const defaultTextColor = isLight ? "text-(--dark-text)" : "text-(--light-text)";
+    const activeTextColor = isLight ? "text-(--dark-text)/60" : "text-(--light-text)/60";
     return (
         <NavLink to={url} className={({ isActive }) => 
             `font-(family-name:--sans) 
-            ${isActive ? "text-(--bleu-clair) underline underline-offset-1" 
-            : "text-(--bleu-fonce) no-underline"}
-            hover:text-(--bleu-clair) hover:underline hover:underline-offset-1`
+            ${isActive ? `${activeTextColor} underline underline-offset-1`
+            : `${defaultTextColor} no-underline`}
+            hover:${activeTextColor} hover:underline hover:underline-offset-1`
         }>{text}</NavLink>
     )
 }
 
-export default function Header() {
+export default function Header({ isLight }) {
     const { lang } = useParams(); // Current language ('fr' or 'en')
     const t = getUiTranslation(lang);
     return (
@@ -25,10 +27,10 @@ export default function Header() {
             </Link>
            
             <div className="flex gap-8 justify-end items-center">
-                <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} />
+                <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} isLight={isLight} />
                 {/* <HeaderLink text={t.nav.crafts} url={`/${lang}/crafts`} /> */}
-                <HeaderLink text={t.nav.about} url={`/${lang}/about`} />
-                <HeaderLink text={t.nav.contact} url={`/${lang}/contact`} />
+                <HeaderLink text={t.nav.about} url={`/${lang}/about`} isLight={isLight} />
+                <HeaderLink text={t.nav.contact} url={`/${lang}/contact`} isLight={isLight} />
                 <LanguageDropdown />
             </div>
         </nav>

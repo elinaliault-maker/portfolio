@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router"
 import { getProjects } from "../utils/getProjects"
 import { getUiTranslation } from "../utils/getUiTranslation"
 import List from "../components/List"
-// import PageTitleWithIcons from "../components/PageTitleWithIcons"
+import PageTitleWithIcons from "../components/PageTitleWithIcons"
 
 // Component to render a single project
 function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) {
@@ -55,12 +55,12 @@ export default function Projects() {
 
     return (
         <>
-            {/* <PageTitleWithIcons text={t.pagesTitle.projects} /> */}
-            <div className="bg-[url(/texture/paper-light-gray.png)] bg-center bg-repeat
+            <PageTitleWithIcons text={t.pagesTitle.projects} />
+            {/* <div className="bg-[url(/texture/paper-light-gray.png)] bg-center bg-repeat
             shadow-(--shadow) inline-block
             py-1 px-2 rounded-[1px] w-fit mb-10 rotate-358 border-2 border-(--text)/80">
                 <h1 className="w-fit m-0 text-(--text)">{t.pagesTitle.projects}</h1>
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Mapping over the JSON array to generate a block for each project */}
                 {projects.map((project) => (

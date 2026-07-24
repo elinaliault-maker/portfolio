@@ -29,8 +29,10 @@
 :root {
   --violet: #935CC7;
   --bleu-clair: #5C6AC7;
-  --bleu-fonce: #FAFAFA;
-  --text: #160038;
+  --light-gray: #F1F1F1;
+  --dark-blue: #20004F;
+  --dark-text: var(--dark-blue);
+  --light-text: var(--light-gray);
   --text-h: var(--bleu-fonce);
   --bg: #FAFAFA;
   --border: #F8EDE2;
@@ -105,7 +107,7 @@ h1, h2 {
 }
 h1 {
   font-size: 3rem;
-  /* color: var(--text-h); */
+  /* color: var(--light-gray); */
   /* margin: 2rem 0; */
   @media (max-width: 1024px) {
     font-size: 2.5rem;
