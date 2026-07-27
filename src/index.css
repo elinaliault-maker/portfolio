@@ -84,8 +84,8 @@ body {
   user-select: auto;
 }
 body::selection {
-  color: var(--bg);
-  background-color: var(--bleu-fonce);
+  color: var(--light-gray);
+  background-color: var(--bleu-clair);
 }
 
 /* #root {
