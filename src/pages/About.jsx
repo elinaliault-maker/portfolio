@@ -1,7 +1,7 @@
 import { useParams } from "react-router"
 import { getUiTranslation } from "../utils/getUiTranslation"
 import { getAbout } from "../utils/getAbout";
-import PageTitleWithIcons from "../components/PageTitleWithIcons"
+import PageTitle from "../components/PageTitle"
 import { CollapseItem } from "../components/CollapseItem";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <>
-      <PageTitleWithIcons text={t.pagesTitle.about} />
+      <PageTitle text={t.pagesTitle.about} />
       {/* Presentation */}
       <div className="flex flex-col gap-4 justify-self-center mb-16">
         <div className="text-center w-70 h-70 rounded-xl bg-cover bg-[url(https://cdn.myportfolio.com/ff10bd09-4e02-4f96-b74a-01a590772b24/aec08532-24d2-4389-b242-8209fd782950.png?h=cb995b6b57d52c15ea63207b2fc27951)]"></div>

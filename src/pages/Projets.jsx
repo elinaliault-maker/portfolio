@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router"
 import { getProjects } from "../utils/getProjects"
 import { getUiTranslation } from "../utils/getUiTranslation"
 import List from "../components/List"
-import PageTitleWithIcons from "../components/PageTitleWithIcons"
+import PageTitle from "../components/PageTitle.jsx";
 
 // Component to render a single project
 function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) {
@@ -55,7 +55,7 @@ export default function Projects() {
 
     return (
         <>
-            <PageTitleWithIcons text={t.pagesTitle.projects} />
+            <PageTitle text={t.pagesTitle.projects} />
             {/* <div className="bg-[url(/texture/paper-light-gray.png)] bg-center bg-repeat
             shadow-(--shadow) inline-block
             py-1 px-2 rounded-[1px] w-fit mb-10 rotate-358 border-2 border-(--text)/80">

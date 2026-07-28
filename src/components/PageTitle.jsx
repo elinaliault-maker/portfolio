@@ -1,4 +1,4 @@
-export default function PageTitleWithIcons({text}) {
+export default function PageTitle({text}) {
     return (
         <div className="relative inline-block mt-6 mb-14 px-20">
             {/* <span 
@@ -7,7 +7,7 @@ export default function PageTitleWithIcons({text}) {
             >
                 {"\uf003"}
             </span> */}
-            <h1>
+            <h1 className="text-(--light-text)">
                 {text}
             </h1>
             {/* <span 

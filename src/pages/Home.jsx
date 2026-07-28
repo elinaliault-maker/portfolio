@@ -1,6 +1,6 @@
 import { useParams } from "react-router"
 import { getUiTranslation } from "../utils/getUiTranslation"
-import PageTitleWithIcons from "../components/PageTitleWithIcons"
+import PageTitle from "../components/PageTitle.jsx";
 
 export default function Home() {
   const { lang } = useParams();
@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <PageTitleWithIcons text={t.pagesTitle.home} />
+      <PageTitle text={t.pagesTitle.home} />
     </>
   )
 }
