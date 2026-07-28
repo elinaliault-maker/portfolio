@@ -27,8 +27,9 @@
 
 /* ROOT */
 :root {
-  --violet: #935CC7;
-  --bleu-clair: #5C6AC7;
+  --violet: #7753b3;
+  --sky-blue: #535fb3;
+  --turquoise: #538fb3;
   --light-gray: #F1F1F1;
   --dark-blue: #20004F;
   --dark-text: var(--dark-blue);
@@ -85,7 +86,7 @@ body {
 }
 body::selection {
   color: var(--light-gray);
-  background-color: var(--bleu-clair);
+  background-color: var(--sky-blue);
 }
 
 /* #root {

@@ -44,7 +44,7 @@ export function LanguageDropdown() {
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Change Language"
-                className="w-8 h-6 rounded-md bg-(--bg) border-2 border-(--bleu-fonce)/16 hover:border-(--bleu-clair) transition-all duration-300 cursor-pointer flex items-center justify-center overflow-hidden focus:outline-none focus:ring-2 focus:ring-(--bleu-fonce)"
+                className="w-8 h-6 rounded-md bg-(--bg) border-2 border-(--bleu-fonce)/16 hover:border-(--sky-blue) transition-all duration-300 cursor-pointer flex items-center justify-center overflow-hidden focus:outline-none focus:ring-2 focus:ring-(--bleu-fonce)"
             >
                 <img 
                     src={flags[currentLang]?.src} 
@@ -66,8 +66,8 @@ export function LanguageDropdown() {
                                 onClick={() => handleSelect(key)}
                                 className={`flex items-center gap-1.75 w-full px-2 py-1.5 text-sm font-semibold rounded-lg transition-all cursor-pointer ${
                                     isSelected 
-                                        ? 'bg-(--bleu-clair) text-(--bg)' 
-                                        : 'text-(--text) hover:bg-(--bleu-clair)/16'
+                                        ? 'bg-(--sky-blue) text-(--bg)' 
+                                        : 'text-(--text) hover:bg-(--sky-blue)/16'
                                 }`}
                             >
                                 {/* Mini circular flag icon inside the dropdown list */}

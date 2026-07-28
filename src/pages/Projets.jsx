@@ -13,7 +13,7 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
             className="group flex flex-col justify-start cursor-pointer no-underline text-inherit
             bg-[url(/texture/paper-light-gray.png)] bg-center bg-repeat
             shadow-(--shadow)
-            rounded-[1px] border-2 border-(--text)/80 rotate-359"
+            rounded-[1px] border-2 border-(--dark-blue) rotate-359"
         >
             <div className="w-auto aspect-3/2 overflow-hidden">
                 <div 
@@ -23,9 +23,9 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
                 />
             </div>
             <div className="flex flex-col gap-1.5 justify-start
-            p-2 border-t-2 border-(--text)/80">
-                <h3 className="text-left m-0 text-(--bleu-clair) 
-                transition-colors duration-300 group-hover:text-(--violet)">{title}</h3>
+            p-2 border-t-2 border-(--dark-blue)">
+                <h3 className="text-left m-0 text-(--sky-blue) 
+                transition-colors duration-300 group-hover:text-(--turquoise)">{title}</h3>
                 <List textArray={[detail]} />
                 {/* Loop through each type to create individual tags */}
                 <div className="flex flex-wrap gap-2">
@@ -33,8 +33,8 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
                         <span 
                             key={tagIndex} 
                             className="px-2 py-1 text-xs font-medium rounded-lg 
-                            border border-(--blue-clair) text-(--text) 
-                            transition-all duration-300 group-hover:border-(--violet) group-hover:text-(--violet)"
+                            border border-(--sky-blue) text-(--sky-blue) 
+                            transition-all duration-300 group-hover:border-(--turquoise) group-hover:text-(--turquoise)"
                         >
                             {type}
                         </span>

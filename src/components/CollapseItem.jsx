@@ -13,7 +13,7 @@ export function CollapseItem({ company, role, date, description, defaultOpen = f
             >
                 {/* Left Column: Company & Role */}
                 <div className="flex flex-col gap-1">
-                    <h4 className="m-0 text-(--bleu-clair) transition-colors group-hover:text-(--bleu-clair)/80">
+                    <h4 className="m-0 text-(--sky-blue) transition-colors group-hover:text-(--sky-blue)/80">
                         {company}
                     </h4>
                     <p className="m-0 text-sm font-medium text-(--text)">
