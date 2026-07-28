@@ -12,7 +12,7 @@ function HeaderLink({ text, url, isLight }) {
             `font-(family-name:--sans) 
             ${isActive ? `${activeTextColor} underline underline-offset-1`
             : `${defaultTextColor} no-underline`}
-            hover:${activeTextColor} hover:underline hover:underline-offset-1`
+            hover:underline hover:underline-offset-1`
         }>{text}</NavLink>
     )
 }
