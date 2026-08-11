@@ -13,6 +13,60 @@
         "coverUrl": "/projectsAssets/cover2.jpg",
         "title": "Exemple2",
         "detail": "MAIF, 2022",
-        "types": ["UI", "UX design"]
+        "types": ["UI", "UX design"],
+        "sections": [
+            {
+            "type": "overview",
+            "id": "overview",
+            "label": "Overview",
+            "role": "UI/UX Design",
+            "timeline": "3 months",
+            "tools": ["Figma", "React", "Tailwind"],
+            "summary": "PlayerPursuits helps golfers discover and book tee times at courses near them."
+            },
+            {
+            "type": "sectionTitle",
+            "id": "problem",
+            "label": "The Problem",
+            "title": "Booking a tee time shouldn't feel like homework"
+            },
+            {
+            "type": "titleParagraph",
+            "title": "Research",
+            "paragraph": "We interviewed 12 golfers across 3 clubs to understand..."
+            },
+            {
+            "type": "image",
+            "src": "/case-studies/playerpursuits/research.jpg",
+            "caption": "Affinity mapping from user interviews",
+            "size": "full"
+            },
+            {
+            "type": "imageGrid",
+            "id": "explorations",
+            "label": "Explorations",
+            "columns": 2,
+            "images": [
+                { "src": "/case-studies/playerpursuits/explore-1.jpg", "caption": "Early wireframe" },
+                { "src": "/case-studies/playerpursuits/explore-2.jpg", "caption": "Color exploration" },
+                { "src": "/case-studies/playerpursuits/explore-3.jpg" },
+                { "src": "/case-studies/playerpursuits/explore-4.jpg" }
+            ]
+            },
+            {
+            "type": "video",
+            "id": "prototype",
+            "label": "Prototype",
+            "src": "/case-studies/playerpursuits/demo.mp4",
+            "poster": "/case-studies/playerpursuits/demo-poster.jpg",
+            "caption": "Final booking flow prototype"
+            },
+            {
+            "type": "pdf",
+            "id": "styleguide",
+            "label": "Style Guide",
+            "src": "/projectsAssets/regles-captaine.pdf"
+            }
+        ]
     }
 ]
