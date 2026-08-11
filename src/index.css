@@ -31,10 +31,10 @@
   --sky-blue: #535fb3;
   --turquoise: #538fb3;
   --light-gray: #F1F1F1;
-  --dark-blue: #20004F;
+  --dark-blue: #2d1e42;
   --dark-text: var(--dark-blue);
   --light-text: var(--light-gray);
-  --text-h: var(--bleu-fonce);
+  --text-h: var(--dark-blue);
   --bg: #FAFAFA;
   --border: #F8EDE2;
   --code-bg: #F8EDE2;

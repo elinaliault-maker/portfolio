@@ -7,6 +7,7 @@ import PageTitle from "../components/PageTitle.jsx";
 
 // Component to render a single project
 function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) {
+    // const purpleColor = "#AA74FB";
     return (
         <Link 
             to={`/${langUrl}/projets/${projectUrl}`}
@@ -15,7 +16,9 @@ function ProjectBlock ({ langUrl, projectUrl, coverUrl, title, detail, types }) 
             shadow-(--shadow)
             rounded-[1px] border-2 border-(--dark-blue) rotate-359"
         >
-            <div className="w-auto aspect-3/2 overflow-hidden">
+            <div className="w-auto aspect-3/2 overflow-hidden relative">
+                <div className="hidden group-hover:block bg-[#AA74FB] opacity-40 mix-blend-multiply z-1
+                w-full h-full absolute top-0 left-0"></div>
                 <div 
                     style={{ backgroundImage: `url(${coverUrl})` }} 
                     className="w-full h-full bg-cover bg-center 

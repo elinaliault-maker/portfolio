@@ -2,7 +2,7 @@ import Header from "./Header";
 
 export default function SectionTop({ pageIsLight }) {
     // const bgClass = pageIsLight ? "bg-[url(/texture/paper-blue.png)]" : "bg-[url(/texture/paper-light-gray.png)]" ;
-    const bgUrl = pageIsLight ? "/texture/paper-blue.png" : "/texture/paper-light-gray.png" ;
+    const bgUrl = pageIsLight ? "/texture/paper-purple.png" : "/texture/paper-light-gray.png" ;
     return (
         <section 
             className="relative w-full"

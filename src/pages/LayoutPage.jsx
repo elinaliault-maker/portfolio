@@ -11,7 +11,7 @@ export default function LayoutPage() {
     // 2. Decide background based on the route match
     // If it's a project detail page -> Light background
     // For all other pages -> Dark background
-    const bgClass = isProjectDetail ? "bg-[url(/texture/paper-light-gray.png)]" : "bg-[url(/texture/paper-blue.png)]";
+    const bgClass = isProjectDetail ? "bg-[url(/texture/paper-light-gray.png)]" : "bg-[url(/texture/paper-purple.png)]";
     const ComponentTop = isProjectDetail ? <SectionTop pageIsLight={isProjectDetail} /> : <Header isLight={isProjectDetail} />;
 
   return (
