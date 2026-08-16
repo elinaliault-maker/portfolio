@@ -4,7 +4,7 @@ import SectionTitle from "./SectionTitle";
 // import ImageBlock from "./ImageBlock";
 import ImageGrid from "./ImageGrid";
 // import VideoBlock from "./VideoBlock";
-import PdfFlipbook from "./PdfFlipbook";
+import PdfFlipbook from "./pdfModule/PdfFlipbook";
 
 export const moduleRegistry = {
 //   overview: Overview,
