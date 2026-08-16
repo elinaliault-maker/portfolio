@@ -7,32 +7,37 @@ import pdfWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
-export default function PdfFlipbookJs({ src, width = "800px", height = "600px" }) {
+export default function PdfFlipbookJs({ src, width = "800px" }) {
   const [pages, setPages] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ready | error
+  const [internalStatus, setInternalStatus] = useState("loading");
+  const [pageAspect, setPageAspect] = useState(null); // page width / page height
+
+  const status = !src ? "error" : internalStatus;
 
   const containerRef = useRef(null);
   const prevBtnRef = useRef(null);
   const nextBtnRef = useRef(null);
   const flipbookInstance = useRef(null);
 
-  // Step 1: rasterize PDF pages to images (same as before)
   useEffect(() => {
-    if (!src) {
-      setStatus("error");
-      return;
-    }
+    if (!src) return;
     let cancelled = false;
 
     async function renderPdfToImages() {
       try {
-        setStatus("loading");
+        setInternalStatus("loading");
         const pdf = await pdfjsLib.getDocument({ url: src }).promise;
         const images = [];
+        let firstPageAspect = null;
 
         for (let i = 1; i <= pdf.numPages; i++) {
           const page = await pdf.getPage(i);
           const viewport = page.getViewport({ scale: 2 });
+
+          if (i === 1) {
+            firstPageAspect = viewport.width / viewport.height;
+          }
+
           const canvas = document.createElement("canvas");
           canvas.width = viewport.width;
           canvas.height = viewport.height;
@@ -44,11 +49,12 @@ export default function PdfFlipbookJs({ src, width = "800px", height = "600px" }
 
         if (!cancelled) {
           setPages(images);
-          setStatus("ready");
+          setPageAspect(firstPageAspect);
+          setInternalStatus("ready");
         }
       } catch (err) {
         console.error("PDF render failed:", err);
-        if (!cancelled) setStatus("error");
+        if (!cancelled) setInternalStatus("error");
       }
     }
 
@@ -58,13 +64,17 @@ export default function PdfFlipbookJs({ src, width = "800px", height = "600px" }
     };
   }, [src]);
 
-  // Step 2: once pages are rasterized AND the DOM skeleton (with that many
-  // .c-flipbook__page divs) has actually rendered, mount the plugin.
-  useEffect(() => {
-    if (status !== "ready" || pages.length === 0 || !containerRef.current) return;
+  // book shows two pages side by side, so the whole book's aspect ratio
+  // is (2 * pageWidth) / pageHeight — height derived from your fixed width
+  const numericWidth = parseInt(width, 10);
+  const computedHeight =
+    pageAspect && numericWidth ? `${Math.round(numericWidth / (2 * pageAspect))}px` : undefined;
 
-    // flipbook-js needs a real element id to find its container
-    containerRef.current.id = "flipbook-container";
+  useEffect(() => {
+    if (status !== "ready" || pages.length === 0 || !containerRef.current || !computedHeight) return;
+
+    const container = containerRef.current;
+    container.id = "flipbook-container";
 
     flipbookInstance.current = new FlipBook("flipbook-container", {
       nextButton: nextBtnRef.current,
@@ -74,18 +84,15 @@ export default function PdfFlipbookJs({ src, width = "800px", height = "600px" }
       arrowKeys: true,
       initialActivePage: 0,
       width,
-      height,
+      height: computedHeight,
     });
 
-    // no documented destroy() in the README — if pages/src change and remount
-    // is needed, clearing the container's innerHTML before re-init avoids
-    // stacking duplicate instances on the same id.
     return () => {
-      if (containerRef.current) containerRef.current.innerHTML = "";
+      container.innerHTML = "";
     };
-  }, [status, pages, width, height]);
+  }, [status, pages, width, computedHeight]);
 
-  if (status === "loading") {
+  if (status === "loading" || (status === "ready" && !computedHeight)) {
     return <div className="text-sm text-gray-400 py-12 text-center">Loading document…</div>;
   }
 
@@ -103,29 +110,21 @@ export default function PdfFlipbookJs({ src, width = "800px", height = "600px" }
 
   return (
     <div className="flex flex-col items-center gap-6 relative">
-        <div className="relative"
-        style={{ width: `${width}`, height: `${height}`,}}>
-            <div className="c-flipbook" ref={containerRef}>
-                {pages.map((pageSrc, i) => (
-                <div className="c-flipbook__page" key={i}>
-                    <img src={pageSrc} className="w-full h-full object-contain" draggable={false} />
-                </div>
-                ))}
+      <div className="relative" style={{ width, height: computedHeight }}>
+        <div className="c-flipbook relative" ref={containerRef} style={{ width, height: computedHeight }}>
+          {pages.map((pageSrc, i) => (
+            <div className="c-flipbook__page" key={i}>
+              <img src={pageSrc} className="w-full h-full object-contain" draggable={false} />
             </div>
+          ))}
         </div>
-      
+      </div>
 
       <div className="flex gap-4">
-        <button
-          ref={prevBtnRef}
-          className="p-2 px-4 rounded-full border border-gray-200 hover:bg-gray-50 transition text-sm"
-        >
+        <button ref={prevBtnRef} className="p-2 px-4 rounded-full border border-gray-200 hover:bg-gray-50 transition text-sm">
           ← Previous
         </button>
-        <button
-          ref={nextBtnRef}
-          className="p-2 px-4 rounded-full border border-gray-200 hover:bg-gray-50 transition text-sm"
-        >
+        <button ref={nextBtnRef} className="p-2 px-4 rounded-full border border-gray-200 hover:bg-gray-50 transition text-sm">
           Next →
         </button>
       </div>
