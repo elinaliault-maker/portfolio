@@ -4,6 +4,7 @@ import FlipBook from "flipbook-js";
 import "flipbook-js/style.css";
 import * as pdfjsLib from "pdfjs-dist";
 import pdfWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
+import PdfPageLoader from "./PdfPageLoader";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
@@ -113,8 +114,7 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
   }, [pageImages, status, loadPage]);
 
   const numericWidth = parseInt(width, 10);
-  const computedHeight =
-    pageAspect && numericWidth ? `${Math.round(numericWidth / (2 * pageAspect))}px` : undefined;
+  const computedHeight = pageAspect && numericWidth ? `${Math.round(numericWidth / (2 * pageAspect))}px` : undefined;
 
   // Step 5: init the flipbook once we have the page count + first computed
   // height. The DOM already has the right number of divs (even if some
@@ -173,7 +173,7 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
               {imgSrc ? (
                 <img src={imgSrc} className="w-full h-full object-contain" draggable={false} />
               ) : (
-                <div className="w-full h-full bg-gray-100 animate-pulse" />
+                <PdfPageLoader pageHeight={computedHeight} />
               )}
             </div>
           ))}
