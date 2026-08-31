@@ -1,12 +1,11 @@
 function ListSimple({text}) {
     return (
-        <div className="flex items-baseline gap-1.5 text-left text-sm text-(--dark-text)">
+        <div className="flex items-baseline gap-1.5 text-left text-sm text-(--marine)">
                 <span 
-                    className="font-icon shrink-0  text-[0.5rem]
-                    group-hover:text-(--turquoise) group-hover:translate-x-0.5 transition-all duration-300"
+                    className="shrink-0  text-[0.75rem]"
                     aria-hidden="true"
                 >
-                    {"\uf000"} {/* unicode arrow */}
+                    ✽
                 </span>
                 
                 <p>

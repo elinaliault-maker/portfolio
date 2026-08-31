@@ -7,7 +7,7 @@ export default function PageTitle({text}) {
             >
                 {"\uf003"}
             </span> */}
-            <h1 className="text-(--light-text)">
+            <h1 className="text-(--marine)">
                 {text}
             </h1>
             {/* <span 

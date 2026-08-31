@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import Projets from "./pages/Projets"
 import DetailProject from "./pages/DetailProject";
 import About from "./pages/About";
-import Contact from "./pages/Contact"
 
 
 const root = document.getElementById("root");
@@ -27,7 +26,6 @@ ReactDOM.createRoot(root).render(
           <Route path="/:lang/projets" element={<Projets />} />
           <Route path="/:lang/projets/:projetUrl" element={<DetailProject />} />
           <Route path="/:lang/about" element={<About />} />
-          <Route path="/:lang/contact" element={<Contact />} />
         </Route>
         {/* Fallback */}
         <Route path="*" element={<RootRedirect />} />

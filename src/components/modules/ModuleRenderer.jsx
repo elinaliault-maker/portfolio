@@ -8,7 +8,7 @@ export default function ModuleRenderer({ block }) {
     // fails loudly in dev instead of silently dropping a section
     console.warn(`No module registered for type "${block.type}"`);
     return (
-      <div className="text-red-500 text-sm py-4">
+      <div className="text-(--state-red) text-sm py-4">
         Unknown module type: {block.type}
       </div>
     );

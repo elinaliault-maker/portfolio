@@ -1,53 +1,28 @@
 /* TYPOS */
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap'); 
-@font-face {
-  font-family: Winkle; 
-  src: url(assets/typo/Winkle-Regular.ttf);
-}
-/* font-icons */
-@font-face {
-  font-family: 'PortfolioIcons';
-  src: url('./assets/typo/icons-portfolio-el.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block; /* Prevents the 'invisible text' glitch while loading */
-}
-.font-icon {
-  font-family: 'PortfolioIcons' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
 
 /* ROOT */
 :root {
-  --violet: #7753b3;
-  --sky-blue: #535fb3;
-  --turquoise: #538fb3;
+  --marine: #054298;
+  --marine-clair: #C3D2E6;
   --light-gray: #F1F1F1;
-  --dark-blue: #2d1e42;
-  --dark-text: var(--dark-blue);
-  --light-text: var(--light-gray);
-  --text-h: var(--dark-blue);
-  --bg: #FAFAFA;
-  --border: #F8EDE2;
-  --code-bg: #F8EDE2;
-  --shadow:
-    rgba(0, 0, 0, 0.2) 0 10px 15px -3px, rgba(0, 0, 0, 0.2) 0 10px 15px 3px;
+  --medium-gray: #EBEBEB;
+  --state-red: #ad4137;
+  --state-green: #a3ad37;
+  --text: var(--marine);
+  --text-h: var(--marine);
+  --bg: var(--light-gray);
+  --border: var(--medium-gray);
+  --code-bg: var(--medium-gray);
+  --shadow-marine: var(--marine) 4px 4px;
+  --shadow-marine-clair: var(--marine-clair) 4px 4px;
 
-  --sans: "Poppins", sans-serif;
-  --heading: "Caprasimo", serif;
+  --font-text: "Faculty Glyphic", sans-serif;
+  --heading: "Righteous", sans-serif;
   --mono: "Space Mono", monospace; /* pour le code...  */
-  --handwritten: Winkle, "Patrick Hand", cursive;
-    /* --heading: var(--handwritten); */
 
-  font: 1rem var(--sans);
+  font: 1rem var(--font-text);
   letter-spacing: 0.02rem;
   color-scheme: light dark;
   color: var(--text);
@@ -85,8 +60,8 @@ body {
   user-select: auto;
 }
 body::selection {
-  color: var(--light-gray);
-  background-color: var(--sky-blue);
+  color: var(--marine);
+  background-color: var(--marine-clair);
 }
 
 /* #root {
@@ -122,7 +97,7 @@ h2 {
   }
 }
 h3, h4 {
-  font-family: var(--sans);
+  font-family: var(--font-text);
   font-weight: bold;
 }
 h3 {

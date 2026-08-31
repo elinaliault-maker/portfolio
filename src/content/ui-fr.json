@@ -1,9 +1,12 @@
 {
   "nav": {
+    "home": "Accueil",
     "projects": "Projets",
-    "crafts": "Créations",
     "about": "À propos",
-    "contact": "Contact"
+    "curriculum": {
+      "title": "CV",
+      "url": "https://elinaliault.myportfolio.com/work"
+    }
   },
   "pagesTitle": {
     "home": "Accueil",
