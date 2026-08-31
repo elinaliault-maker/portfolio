@@ -42,24 +42,6 @@ function HeaderOutsideLink({ text, url }) {
     )
 }
 
-// export default function Header() {
-//     const { lang } = useParams(); // Current language ('fr' or 'en')
-//     const t = getUiTranslation(lang);
-//     return (
-//         <nav className="z-100 w-full grid grid-cols-2 justify-center items-center py-6 text-xs">
-//             <HeaderLogo lang={lang} />
-           
-//             <div className="flex gap-4 justify-end items-center">
-//                 <HeaderLink text={t.nav.home} url={`/${lang}/`} />
-//                 <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} />
-//                 <HeaderLink text={t.nav.about} url={`/${lang}/about`} />
-//                 <HeaderOutsideLink text={t.nav.curriculum.title} url={t.nav.curriculum.url} />
-//                 <LanguageDropdown />
-//             </div>
-//         </nav>
-//     )
-// }
-
 export default function Header() {
     const { lang } = useParams();
     const t = getUiTranslation(lang);
