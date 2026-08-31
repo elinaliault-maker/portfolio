@@ -9,7 +9,7 @@ export default function LanguageWrapper() {
     // 1. If the URL language isn't supported (e.g. /es/projets or /abc/projets), 
     // fallback to French automatically.
     if (!SUPPORTED_LANGUAGES.includes(lang)) {
-        return <Navigate to="/fr/projets" replace />;
+        return <Navigate to="/fr/" replace />;
     }
 
     // 2. If the language is valid, render the matching child page 
