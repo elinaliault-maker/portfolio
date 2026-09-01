@@ -15,9 +15,9 @@ function HeaderLogo({ lang }) {
     )
 }
 
-function HeaderLink({ text, url }) {
+function HeaderLink({ text, url, end = false }) {
     return (
-        <NavLink to={url} className={({ isActive }) => 
+        <NavLink to={url} end={end} className={({ isActive }) => 
             `w-fit px-1 font-(family-name:--font-text) 
             ${isActive ? `text-(--light-gray) bg-(--marine)`
             : `text-(--marine) bg-none`}
@@ -59,7 +59,7 @@ export default function Header() {
                 <div className="flex gap-4 justify-end items-center">
                     {/* Desktop nav links — hidden below md */}
                     <div className="hidden md:flex gap-4 items-center">
-                        <HeaderLink text={t.nav.home} url={`/${lang}/`} />
+                        <HeaderLink text={t.nav.home} url={`/${lang}/`} end />
                         <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} />
                         <HeaderLink text={t.nav.about} url={`/${lang}/about`} />
                         <HeaderOutsideLink text={t.nav.curriculum.title} url={t.nav.curriculum.url} />
