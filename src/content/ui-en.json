@@ -13,5 +13,10 @@
     "projects": "My Projects",
     "about": "About Me",
     "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2026. All rights reserved.",
+    "contactTitle": "Contact",
+    "sitemapTitle": "Sitemap"
   }
 }

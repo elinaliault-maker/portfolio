@@ -13,5 +13,10 @@
     "projects": "Mes Projets",
     "about": "À propos de moi",
     "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2026. Tout droits réservés.",
+    "contactTitle": "Contact",
+    "sitemapTitle": "Plan du site"
   }
 }

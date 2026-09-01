@@ -52,7 +52,7 @@ export default function Header() {
     const closeAll = () => setOpenMenu(null);
 
     return (
-        <nav className="z-100 w-full py-6 text-xs relative">
+        <nav className="z-100 w-full py-6 text-base relative">
             <div className="w-full grid grid-cols-2 justify-center items-center">
                 <HeaderLogo lang={lang} />
 

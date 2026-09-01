@@ -39,7 +39,7 @@ export function LanguageDropdown({ isOpen, onToggle, onClose }) {
                 type="button"
                 onClick={onToggle}
                 aria-label="Change Language"
-                className="w-7 h-5 bg-(--bg) 
+                className="w-8 h-6 bg-(--bg) 
                 border-2 border-(--marine-clair)
                 hover:border-(--marine) transition-all duration-300 cursor-pointer flex items-center justify-center overflow-hidden focus:outline-none focus:ring-2 focus:ring-(--marine) focus:border-none"
             >
