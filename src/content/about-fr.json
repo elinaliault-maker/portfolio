@@ -1,38 +1,95 @@
 {
   "presentation": {
-    "title": "Elina Liault",
-    "paragraphs": ["designer digital et graphique", "...", "..."]
+    "HeroImg": {
+      "src": "/aboutPage/aboutCvPhoto.png",
+      "alt": "Image"
+    },
+    "sectionTitle": "Hello, je suis Elina",
+    "paragraph": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "contactButton": "Me contacter",
+    "cvButton": "Télécharger mon CV"
+  },
+  "skills": {
+  "sectionTitle": "Compétences",
+  "content": [
+  {
+    "title": "Design et Création",
+    "tags": ["UI/UX design", "Design système", "Motion design", "Design graphique",
+    "Direction artistique", "Wireframing", "Prototypage", "Design print"]
+  },
+  {
+    "title": "Outils et Logiciels",
+    "tags": ["Figma", "Illustrator", "InDesign", "After Effects", "Premiere Pro",
+    "Photoshop", "Fusion 360"]
+  },
+  {
+    "title": "Développement et Technologie",
+    "tags": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"]
+  }]
   },
   "work": {
-    "title": "Expériences",
+    "sectionTitle": "Expériences",
     "content": [
     {
       "id": 1,
-      "company": "Liasse 360",
-      "role": "UX/UI Designer",
+      "icon": "/aboutPage/liasse360-logo.png",
+      "title": "Liasse 360",
+      "subtitle": "UX/UI Designer",
       "date": "Septembre 2024 - Août 2026",
-      "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication."
+      "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication.",
+      "relatedProjects": [
+        { "label": "Charte graphique", "url": "/fr/projets/charte-liasse360" }, 
+        { "label": "Logiciel SaaS" }
+      ]
     },
     {
       "id": 2,
-      "company": "MAIF",
-      "role": "UI Designer",
+      "icon": "/aboutPage/maif-logo.png",
+      "title": "MAIF",
+      "subtitle": "UI Designer",
       "date": "Mai - Juillet 2023",
       "description": "Gestion de librairies de pictogrammes et de composants. Maquettage d'email commerciaux."
     },
     {
       "id": 3,
-      "company": "Meubles CELIO",
-      "role": "Designer graphique",
+      "icon": "/aboutPage/meubles-celio-logo.png",
+      "title": "Meubles CELIO",
+      "subtitle": "Designer graphique",
       "date": "Juillet 2022",
       "description": "Maquettage de goodies et de posts pour les réseaux sociaux. Réalisation de mockups des espace de la marque."
     },
     {
       "id": 4,
-      "company": "Mairie de Niort",
-      "role": "Designer graphique",
+      "icon": "/aboutPage/mairie-niort-logo.png",
+      "title": "Mairie de Niort",
+      "subtitle": "Designer graphique",
       "date": "Juin 2022",
       "description": "Création d'une charte graphique pour un service interne. Mise en page de la newsletter, d'affiches et de documents internes."
     }
-  ]}
+  ]},
+  "school": {
+    "sectionTitle": "Formation",
+    "content": [
+    {
+      "id": 1,
+      "icon": "/aboutPage/gobelins-logo.png",
+      "title": "Mastère ECNI",
+      "subtitle": "Gobelins Paris",
+      "date": "Septembre 2024 - Juin 2026",
+      "description": "...",
+      "relatedProjects": [
+        { "label": "Cap'taine", "url": "/fr/projets/captaine" }, 
+        { "label": "Coolisses" }
+      ]
+    },
+    {
+      "id": 2,
+      "icon": "/aboutPage/tourrache-logo.png",
+      "title": "DNMADE",
+      "subtitle": "Lycée La Tourrache",
+      "date": "Septembre 2021 - Juin  2024",
+      "description": "..."
+    }
+    ]
+  }
 }

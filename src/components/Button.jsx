@@ -22,7 +22,7 @@ export function Button({
 }) {
     const classes = `w-fit px-5 py-1.5 rounded-full
         flex items-center gap-2
-        font-(family-name:--font-text) text-2xl
+        font-(family-name:--font-text) text-xl
         transition-all duration-200 ease-out
         cursor-pointer
         ${variants[variant]} ${className}`;

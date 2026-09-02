@@ -1,38 +1,91 @@
 {
-  "presentation": {
-    "title": "Elina Liault",
-    "paragraphs": ["digital and graphic designer", "...", "..."]
+ "presentation": {
+    "HeroImg": {
+      "src": "/aboutPage/aboutCvPhoto.png",
+      "alt": "Image"
+    },
+    "sectionTitle": "Hello, je suis Elina",
+    "paragraph": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "contactButton": "Contact me",
+    "cvButton": "Download my resume"
+  },
+  "skills": {
+  "sectionTitle": "Skills",
+  "content": [
+  {
+    "title": "Design and Creation",
+    "tags": ["UI/UX design", "Design system", "Motion design", "Graphic design",
+    "Artistic direction", "Wireframing", "Prototypage", "Print design"]
+  },
+  {
+    "title": "Tools and Softwares",
+    "tags": ["Figma", "Illustrator", "InDesign", "After Effects", "Premiere Pro",
+    "Photoshop", "Fusion 360"]
+  },
+  {
+    "title": "Programming",
+    "tags": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"]
+  }]
   },
   "work": {
-    "title": "Work experience",
+    "sectionTitle": "Work experience",
     "content": [{
         "id": 1,
-        "company": "Liasse 360",
-        "role": "UX/UI Designer",
+        "icon": "/aboutPage/liasse360-logo.png",
+        "title": "Liasse 360",
+        "subtitle": "UX/UI Designer",
         "date": "September 2024 - August 2026",
         "description": "Supporting the product development by designing the software's user interface and creating communication visuals."
         },
         {
         "id": 2,
-        "company": "MAIF",
-        "role": "UI Designer",
+        "icon": "/aboutPage/maif-logo.png",
+        "title": "MAIF",
+        "subtitle": "UI Designer",
         "date": "Mai - July 2023",
         "description": "Participating to the design system's icon and component libraries. Designing marketing emails."
         },
         {
         "id": 3,
-        "company": "Meubles CELIO",
-        "role": "Graphic Designer",
+        "icon": "/aboutPage/meubles-celio-logo.png",
+        "title": "Meubles CELIO",
+        "subtitle": "Graphic Designer",
         "date": "July 2022",
         "description": "Creating mockups for promotional items and the brand's spaces. Designing social media posts."
         },
         {
         "id": 4,
-        "company": "Mairie de Niort",
-        "role": "Graphic Designer",
+        "icon": "/aboutPage/mairie-niort-logo.png",
+        "title": "Mairie de Niort",
+        "subtitle": "Graphic Designer",
         "date": "June 2022",
         "description": "Creation of a visual identity for an internal department. Designing the newsletter, posters, and internal documents."
     }]
+  },
+  "school": {
+    "sectionTitle": "Education",
+    "content": [
+    {
+      "id": 1,
+      "icon": "/aboutPage/gobelins-logo.png",
+      "title": "Mastère ECNI",
+      "subtitle": "Gobelins Paris",
+      "date": "September 2024 - June 2026",
+      "description": "...",
+      "relatedProjects": [
+        { "label": "Cap'taine", "url": "/fr/projets/captaine" }, 
+        { "label": "Coolisses" }
+      ]
+    },
+    {
+      "id": 2,
+      "icon": "/aboutPage/tourrache-logo.png",
+      "title": "DNMADE",
+      "subtitle": "Lycée La Tourrache",
+      "date": "September 2021 - June  2024",
+      "description": "..."
+    }
+    ]
   }
   
 }
