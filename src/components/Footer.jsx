@@ -49,7 +49,7 @@ export default function Footer() {
     const t = getUiTranslation(lang);
 
     return (
-        <footer className="w-screen bg-(--marine) border-2 border-(--marine-clair)
+        <footer className="w-full bg-(--marine)
             px-8 sm:px-10 md:px-16 lg:px-60 xl:px-60 2xl:px-80
             py-10 md:py-12
             flex flex-col md:flex-row md:justify-between md:items-start
