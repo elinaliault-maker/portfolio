@@ -51,7 +51,7 @@ export default function Projects() {
 
     return (
         <>
-            <div className="mt-16 flex flex-col items-center gap-6">
+            <div className="mt-16 flex flex-col items-center gap-6 mb-16">
                 <div className="relative inline-block mt-2 mb-2">
                     <h1 className="font-(family-name:--heading)
                     text-(--marine) text-4xl sm:text-8xl text-center">
