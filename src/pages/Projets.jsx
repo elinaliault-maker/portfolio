@@ -20,16 +20,21 @@ export default function Projects() {
             py-1 px-2 rounded-[1px] w-fit mb-10 rotate-358 border-2 border-(--text)/80">
                 <h1 className="w-fit m-0 text-(--text)">{t.pagesTitle.projects}</h1>
             </div> */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+            gap-12 md:gap-18 mb-20">
                 {/* Mapping over the JSON array to generate a block for each project */}
-                {projects.map((project) => (
+                {projects.map((project, index) => (
                     <ProjectCard
-                        key={project.projectNumber} // Always provide a unique key in React lists
+                        key={index}
+                        index={index}
                         langUrl={lang}
                         projectUrl={project.url}
-                        coverUrl={project.coverUrl} 
+                        coverUrl={project.coverUrl}
+                        isSchool={project.isSchool}
+                        orgName={project.orgName}
+                        endDate={project.endDate} 
                         title={project.title} 
-                        detail={project.detail}
+                        description={project.description}
                         types={project.types} 
                     />
                 ))}

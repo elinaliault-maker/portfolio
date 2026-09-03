@@ -1,19 +1,23 @@
 [
     {
-        "projectNumber": 1,
-        "url": "exemple",
+        "url": "l360-identity",
         "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
-        "title": "Un logiciel communicant",
-        "detail": "Liasse 360, 2026",
-        "types": ["Saas", "UI", "UX"]
+        "title": "Identité visuelle",
+        "description": "faire reconnaître la marque dans ses communication",
+        "isSchool": false,
+        "orgName": "Liasse 360",
+        "endDate": "2026",
+        "types": ["Graphisme", "DA", "Motion", "Print", "UI"]
     },
     {
-        "projectNumber": 2,
-        "url": "ex2",
+        "url": "captaine",
         "coverUrl": "/projectsAssets/cover2.jpg",
-        "title": "Exemple2",
-        "detail": "MAIF, 2022",
-        "types": ["UI", "UX design"],
+        "title": "Cap’taine",
+        "description": "le jeu collaboratif où l’on fait avec les moyens du bord",
+        "isSchool": true,
+        "orgName": "Gobelins Paris",
+        "endDate": "2026",
+        "types": ["Game design", "DA", "Narration", "Écriture"],
         "sections": [
             {
             "type": "overview",
