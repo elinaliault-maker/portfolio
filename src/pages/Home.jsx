@@ -1,6 +1,5 @@
 import { useParams } from "react-router"
 import { getUiTranslation } from "../utils/getUiTranslation"
-import PageTitle from "../components/PageTitle.jsx";
 
 export default function Home() {
   const { lang } = useParams();
@@ -8,7 +7,7 @@ export default function Home() {
 
   return (
     <>
-      <PageTitle text={t.pagesTitle.home} />
+      <h1>{t.pagesTitle.home}</h1>
     </>
   )
 }
