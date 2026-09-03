@@ -29,7 +29,7 @@ export function Button({
 
     const content = (
         <>
-            <Icon size={18} />
+            {Icon && <Icon size={18} />}
             {text}
         </>
     );

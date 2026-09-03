@@ -26,7 +26,7 @@ export default function ProjectCard({
             {/* Index number */}
             <span className="text-sm sm:text-base text-(--marine) 
             font-(family-name:--font-text) mb-2">
-                {String(index + 1).padStart(2, "0")}
+                {String(index).padStart(2, "0")}
             </span>
 
             {/* Cover image */}

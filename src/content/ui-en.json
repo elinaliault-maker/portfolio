@@ -10,9 +10,15 @@
   },
   "pagesTitle": {
     "home": "Home",
-    "projects": "My Projects",
-    "about": "About Me",
-    "contact": "Contact"
+    "projects": "Projects"
+  },
+  "pagesSubtitle": {
+    "projects": "subtitle"
+  },
+  "filters": {
+    "all": "All",
+    "list": ["UI", "UX", "DA", "Graphic design", "Motion", "Game design"],
+    "noResults": "No project found for this filter."
   },
   "footer": {
     "copyright": "© 2026. All rights reserved.",
