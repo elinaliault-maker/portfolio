@@ -4,7 +4,7 @@ import { getAbout } from "../utils/getAbout";
 import { CollapseItem } from "../components/CollapseItem";
 import { Button } from "../components/Button";
 import { Download, Mail } from "lucide-react";
-import Tag from "../components/Tag";
+import IndividualTag from "../components/IndividualTag";
 
 function AboutSectionTitle({ text }) {
   return (
@@ -51,7 +51,7 @@ export default function About() {
                 mb-4">{item.title}</h4>
                 <div className="w-full flex flex-wrap gap-4">
                   {item.tags.map((tag, i) => (
-                      <Tag
+                      <IndividualTag
                           key={i}
                           text={tag}
                       />
