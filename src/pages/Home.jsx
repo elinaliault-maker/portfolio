@@ -13,7 +13,7 @@ function RecentProjects() {
     const recentProjects = projects.slice(0, 4);
 
     return (
-        <section className="px-4 mb-44">
+        <section className="px-4 my-44">
             {/* Header row: title + subtitle */}
             <div className="flex flex-col gap-2 text-left mb-10">
                 <h2 className="w-fit px-2 m-0
