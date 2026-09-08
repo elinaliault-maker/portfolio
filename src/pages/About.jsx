@@ -25,7 +25,7 @@ export default function About() {
       {/* Presentation */}
       <div className="w-full flex flex-row gap-12 md:gap-20 items-center my-24">
         <img src={about.presentation.HeroImg.src} 
-        alt={about.presentation.HeroImg.src} className="max-w-xs"/>
+        alt={about.presentation.HeroImg.alt} className="max-w-xs"/>
         <div className="flex flex-col gap-4 text-left">
           <h2 className="font-(family-name:--heading) text-2xl md:text-3xl text-(--marine)">
             {about.presentation.sectionTitle}</h2>
