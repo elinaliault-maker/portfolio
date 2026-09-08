@@ -1,10 +1,14 @@
-import { Outlet,  } from "react-router";
+import { Outlet, useLocation, matchPath } from "react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import '../tailwind-import.css'
 import '../index.css'
+import { AboutIntro } from "./Home";
 
 export default function LayoutPage() {
+  const location = useLocation();
+  const isHome = matchPath("/:lang/", location.pathname) !== null;
+
   return (
     <>
     <div
@@ -19,6 +23,7 @@ export default function LayoutPage() {
       </main>
       
     </div>
+    { isHome && <AboutIntro />}
     <Footer />
     </>
   );

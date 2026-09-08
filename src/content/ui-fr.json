@@ -8,17 +8,29 @@
       "url": "https://elinaliault.myportfolio.com/work"
     }
   },
-  "pagesTitle": {
-    "home": "Accueil",
-    "projects": "Projets"
+  "home": {
+    "pagesTitle": "Accueil",
+    "recentProjectsTitle": "Projets récents",
+    "scrollDown": "Scroll vers le bas", 
+    "scrollToProjects": "Pour voir les projets",
+    "recentProjectsSubtitle": "Showcase of some of my recent designs",
+    "viewAllProjects": "Voir tout les projets",
+    "aboutTitle": "Je suis Elina",
+    "aboutText": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "aboutButton": "More about my path",
+    "aboutImg": {
+      "src": "/homePage/homeAboutIntroPhoto.png",
+      "alt": "Image"
+    }
   },
-  "pagesSubtitle": {
-    "projects": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées"
-  },
-  "filters": {
-    "all": "Tous",
-    "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Game design"],
-    "noResults": "Aucun projet trouvé pour ce filtre."
+  "projects": {
+    "pagesTitle": "Projets",
+    "pagesSubtitle": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "filters": {
+      "all": "Tous",
+      "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Game design"],
+      "noResults": "Aucun projet trouvé pour ce filtre."
+    }
   },
   "footer": {
     "copyright": "© 2026. Tout droits réservés.",

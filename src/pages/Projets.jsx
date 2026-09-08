@@ -55,7 +55,7 @@ export default function Projects() {
                 <div className="relative inline-block mt-2 mb-2">
                     <h1 className="font-(family-name:--heading)
                     text-(--marine) text-4xl sm:text-8xl text-center">
-                        {t.pagesTitle.projects}
+                        {t.projects.pagesTitle}
                     </h1>
                     <span 
                         className="text-[4rem] text-(--marine-clair) 
@@ -68,17 +68,17 @@ export default function Projects() {
                 </div>
 
                 <p className="max-w-208 text-center text-(--marine) text-lg">
-                    {t.pagesSubtitle.projects}
+                    {t.projects.pagesSubtitle}
                 </p>
 
                 {/* Filter bar */}
                 <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-16 px-4">
                     <FilterPill
-                        text={t.filters.all}
+                        text={t.projects.filters.all}
                         variant={activeFilter === "all" ? "primary" : "secondary"}
                         onClick={() => setActiveFilter("all")}
                     />
-                    {t.filters.list.map((filter) => (
+                    {t.projects.filters.list.map((filter) => (
                         <FilterPill
                             key={filter}
                             text={filter}
@@ -90,7 +90,7 @@ export default function Projects() {
             </div>
 
             {filteredProjects.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                <div className="grid grid-cols-1 md:grid-cols-2 
                 gap-12 md:gap-18 mb-20">
                     {filteredProjects.map((project, index) => (
                         <ProjectCard
@@ -110,7 +110,7 @@ export default function Projects() {
                 </div>
             ) : (
                 <p className="text-center text-(--state-red) mb-20 pt-2 text-lg">
-                    {t.filters.noResults}
+                    {t.projects.filters.noResults}
                 </p>
             )}
         </>
