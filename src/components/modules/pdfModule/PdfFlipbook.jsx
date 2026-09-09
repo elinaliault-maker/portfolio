@@ -8,24 +8,33 @@ import PdfPageLoader from "./PdfPageLoader";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
-const PRELOAD_WINDOW = 2; // pages loaded ahead/behind current, beyond the cover
+const PRELOAD_WINDOW = 2;
+const MOBILE_BREAKPOINT = 640; // px — change this to move where it switches to cover+button
+const RESIZE_DEBOUNCE = 200; // ms — how long to wait after resize stops before reinit
 
-export default function PdfFlipbookJs({ src, width = "800px" }) {
+export default function PdfFlipbookJs({ src }) {
   const [internalStatus, setInternalStatus] = useState("loading"); // loading | ready | error
   const [pageImages, setPageImages] = useState([]); // sparse array, null until loaded
   const [pageAspect, setPageAspect] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  // derive initial value lazily — no setState-in-effect needed for this
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches
+  );
 
   const status = !src ? "error" : internalStatus;
 
-  const pdfRef = useRef(null); // the loaded pdf document
-  const loadedSetRef = useRef(new Set()); // which indices are loaded or in-flight
+  const pdfRef = useRef(null);
+  const loadedSetRef = useRef(new Set());
+  const [wrapperEl, setWrapperEl] = useState(null); // callback ref target — re-fires when the node actually mounts
   const containerRef = useRef(null);
   const prevBtnRef = useRef(null);
   const nextBtnRef = useRef(null);
   const flipbookInstance = useRef(null);
+  const resizeTimeoutRef = useRef(null);
 
-  // Renders a single page to an image and stores it at that index.
   const loadPage = useCallback(async (index) => {
     if (loadedSetRef.current.has(index)) return;
     loadedSetRef.current.add(index);
@@ -34,7 +43,7 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
     if (!pdf || index < 0 || index >= pdf.numPages) return;
 
     try {
-      const page = await pdf.getPage(index + 1); // pdf.js pages are 1-indexed
+      const page = await pdf.getPage(index + 1);
       const viewport = page.getViewport({ scale: 2 });
 
       if (index === 0) setPageAspect(viewport.width / viewport.height);
@@ -53,11 +62,11 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
       });
     } catch (err) {
       console.error(`Failed to render page ${index + 1}:`, err);
-      loadedSetRef.current.delete(index); // allow retry later
+      loadedSetRef.current.delete(index);
     }
   }, []);
 
-  // Step 1: open the PDF and get page count fast — no rasterizing yet.
+  // Open the PDF, get page count.
   useEffect(() => {
     if (!src) return;
     let cancelled = false;
@@ -83,25 +92,24 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
     };
   }, [src]);
 
-  // Step 2: once we know the page count, load the cover first (priority 1).
+  // Cover always loads first.
   useEffect(() => {
     if (status === "ready" && pageImages.length > 0) {
       loadPage(0);
     }
   }, [status, pageImages.length, loadPage]);
 
-  // Step 3: whenever the visible page changes, load a window around it first.
+  // Preload window around current page — desktop only.
   useEffect(() => {
-    if (status !== "ready") return;
+    if (status !== "ready" || isMobile) return;
     for (let offset = -PRELOAD_WINDOW; offset <= PRELOAD_WINDOW; offset++) {
       loadPage(currentPage + offset);
     }
-  }, [currentPage, status, loadPage]);
+  }, [currentPage, status, isMobile, loadPage]);
 
-  // Step 4: low-priority background pass — fill in everything else, in order,
-  // once the browser is idle, so the whole book is eventually available.
+  // Idle background fill — desktop only.
   useEffect(() => {
-    if (status !== "ready" || pageImages.length === 0) return;
+    if (status !== "ready" || pageImages.length === 0 || isMobile) return;
 
     const idleId = (window.requestIdleCallback || ((fn) => setTimeout(fn, 200)))(function fillRest() {
       const nextUnloaded = pageImages.findIndex((img, i) => img === null && !loadedSetRef.current.has(i));
@@ -111,17 +119,59 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
     return () => {
       if (window.cancelIdleCallback) window.cancelIdleCallback(idleId);
     };
-  }, [pageImages, status, loadPage]);
+  }, [pageImages, status, isMobile, loadPage]);
 
-  const numericWidth = parseInt(width, 10);
-  const computedHeight = pageAspect && numericWidth ? `${Math.round(numericWidth / (2 * pageAspect))}px` : undefined;
-
-  // Step 5: init the flipbook once we have the page count + first computed
-  // height. The DOM already has the right number of divs (even if some
-  // images aren't loaded yet), so this never needs to reinit later.
+  // Subscribe to breakpoint changes (initial value already set lazily above).
   useEffect(() => {
-    if (status !== "ready" || pageImages.length === 0 || !containerRef.current || !computedHeight) return;
-    if (flipbookInstance.current) return; // already initialized, don't redo it
+    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`);
+    const handler = (e) => setIsMobile(e.matches);
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, []);
+
+  // Measure the wrapper's real width. Depends on wrapperEl (state, set via
+  // callback ref) instead of a plain ref + [] deps, so it correctly re-runs
+  // once the wrapper div actually mounts — even if that happens after the
+  // "loading" branch's placeholder JSX (which has no wrapper at all).
+  useEffect(() => {
+    if (!wrapperEl) return;
+
+    const observer = new ResizeObserver((entries) => {
+      const newWidth = Math.round(entries[0].contentRect.width);
+      clearTimeout(resizeTimeoutRef.current);
+      resizeTimeoutRef.current = setTimeout(() => {
+        setContainerWidth(newWidth);
+      }, RESIZE_DEBOUNCE);
+    });
+
+    observer.observe(wrapperEl);
+    return () => {
+      observer.disconnect();
+      clearTimeout(resizeTimeoutRef.current);
+    };
+  }, [wrapperEl]);
+
+  const computedHeight =
+    pageAspect && containerWidth ? Math.round(containerWidth / (2 * pageAspect)) : undefined;
+
+  // Derived key — no separate state/effect needed. Changes whenever the
+  // container's real size changes, which is exactly when we want React to
+  // fully unmount + remount the .c-flipbook subtree (fresh page divs) before
+  // FlipBook re-initializes on it.
+  const flipbookKey = `${containerWidth}-${computedHeight}`;
+
+  // Mount / reinit the flipbook whenever the remount key changes.
+  useEffect(() => {
+    if (
+      status !== "ready" ||
+      isMobile ||
+      pageImages.length === 0 ||
+      !containerRef.current ||
+      !computedHeight ||
+      !containerWidth
+    ) {
+      return;
+    }
 
     const container = containerRef.current;
     container.id = "flipbook-container";
@@ -132,23 +182,24 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
       canClose: true,
       initialCall: true,
       arrowKeys: true,
-      initialActivePage: 0,
-      width,
-      height: computedHeight,
+      initialActivePage: currentPage,
+      width: `${containerWidth}px`,
+      height: `${computedHeight}px`,
       onPageTurn: (e) => {
-        // adjust this depending on what shape flipbook-js actually passes —
-        // check the arg in devtools if the page index doesn't line up
         const page = typeof e === "number" ? e : e?.page ?? e?.detail?.page;
         if (typeof page === "number") setCurrentPage(page);
       },
     });
 
+    // No manual innerHTML clearing — React owns unmounting the old subtree
+    // via the key change on the container div. We just drop our reference.
     return () => {
-      container.innerHTML = "";
+      flipbookInstance.current = null;
     };
-  }, [status, pageImages.length, width, computedHeight]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status, isMobile, pageImages.length, flipbookKey]);
 
-  if (status === "loading" || (status === "ready" && !computedHeight)) {
+  if (status === "loading") {
     return <div className="text-sm text-gray-400 py-12 text-center">Loading document…</div>;
   }
 
@@ -164,16 +215,52 @@ export default function PdfFlipbookJs({ src, width = "800px" }) {
     );
   }
 
+  // MOBILE: cover image + button to open the raw PDF.
+  if (isMobile) {
+    const coverAspectHeight =
+      pageAspect && containerWidth ? Math.round(containerWidth / pageAspect) : undefined;
+
+    return (
+      <div ref={setWrapperEl} className="w-full min-w-0 flex flex-col items-center gap-4">
+        <div className="w-full" style={{ height: coverAspectHeight }}>
+          {pageImages[0] ? (
+            <img
+              src={pageImages[0]}
+              className="w-full h-full object-contain shadow-lg"
+              draggable={false}
+            />
+          ) : (
+            <PdfPageLoader pageHeight={coverAspectHeight ? `${coverAspectHeight}px` : "300px"} />
+          )}
+        </div>
+        <a
+          href={src}
+          target="_blank"
+          rel="noreferrer"
+          className="px-5 py-2 rounded-full border border-gray-300 text-sm hover:bg-gray-50 transition"
+        >
+          Open document
+        </a>
+      </div>
+    );
+  }
+
+  // DESKTOP/TABLET: full flipbook.
   return (
-    <div className="flex flex-col items-center gap-6 relative">
-      <div className="relative" style={{ width, height: computedHeight }}>
-        <div className="c-flipbook relative" ref={containerRef} style={{ width, height: computedHeight }}>
+    <div ref={setWrapperEl} className="w-full min-w-0 flex flex-col items-center gap-6 relative">
+      <div className="relative w-full" style={{ height: computedHeight }}>
+        <div
+          key={flipbookKey}
+          className="c-flipbook relative"
+          ref={containerRef}
+          style={{ width: containerWidth, height: computedHeight }}
+        >
           {pageImages.map((imgSrc, i) => (
             <div className="c-flipbook__page" key={i}>
               {imgSrc ? (
                 <img src={imgSrc} className="w-full h-full object-contain" draggable={false} />
               ) : (
-                <PdfPageLoader pageHeight={computedHeight} />
+                <PdfPageLoader pageHeight={computedHeight ? `${computedHeight}px` : undefined} />
               )}
             </div>
           ))}
