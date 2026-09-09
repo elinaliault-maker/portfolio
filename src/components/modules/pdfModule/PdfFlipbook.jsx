@@ -8,7 +8,7 @@ import pdfWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
 import PdfPageLoader from "./PdfPageLoader";
 import { getUiTranslation } from "../../../utils/getUiTranslation";
 import { Button } from "../../Button";
-import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
+import { SquareArrowOutUpRight, ArrowLeft, ArrowRight } from 'lucide-react';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
@@ -250,7 +250,7 @@ export default function PdfFlipbookJs({ src }) {
         </a> */}
         <Button 
           text={t.projectDetail.pdfFlipbook.ready.openDoc}
-          icon={ExternalLink}
+          icon={SquareArrowOutUpRight}
           variant="primary"
           textSize="small"
           href={src}
@@ -291,7 +291,7 @@ export default function PdfFlipbookJs({ src }) {
         />
         <Button 
           text={t.projectDetail.pdfFlipbook.ready.openDoc}
-          icon={ExternalLink}
+          icon={SquareArrowOutUpRight}
           variant="primary"
           textSize="small"
           href={src}
