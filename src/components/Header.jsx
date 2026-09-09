@@ -60,7 +60,7 @@ export default function Header() {
                     {/* Desktop nav links — hidden below md */}
                     <div className="hidden md:flex gap-4 items-center">
                         <HeaderLink text={t.nav.home} url={`/${lang}/`} end />
-                        <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} />
+                        <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} end />
                         <HeaderLink text={t.nav.about} url={`/${lang}/about`} />
                         <HeaderOutsideLink text={t.nav.curriculum.title} url={t.nav.curriculum.url} />
                     </div>
