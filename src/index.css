@@ -61,8 +61,8 @@ body {
   user-select: auto;
 }
 body::selection {
-  color: var(--marine);
-  background-color: var(--marine-clair);
+  color: #E1C3E6;
+  background-color: #840598;
 }
 
 /* #root {
