@@ -1,10 +1,14 @@
 // modules/PdfFlipbookJs.jsx
 import { useEffect, useRef, useState, useCallback } from "react";
+import { useParams } from "react-router";
 import FlipBook from "flipbook-js";
 import "flipbook-js/style.css";
 import * as pdfjsLib from "pdfjs-dist";
 import pdfWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
 import PdfPageLoader from "./PdfPageLoader";
+import { getUiTranslation } from "../../../utils/getUiTranslation";
+import { Button } from "../../Button";
+import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
@@ -13,6 +17,9 @@ const MOBILE_BREAKPOINT = 640; // px — change this to move where it switches t
 const RESIZE_DEBOUNCE = 200; // ms — how long to wait after resize stops before reinit
 
 export default function PdfFlipbookJs({ src }) {
+  const { lang } = useParams();
+  const t = getUiTranslation(lang);
+
   const [internalStatus, setInternalStatus] = useState("loading"); // loading | ready | error
   const [pageImages, setPageImages] = useState([]); // sparse array, null until loaded
   const [pageAspect, setPageAspect] = useState(null);
@@ -200,15 +207,15 @@ export default function PdfFlipbookJs({ src }) {
   }, [status, isMobile, pageImages.length, flipbookKey]);
 
   if (status === "loading") {
-    return <div className="text-sm text-gray-400 py-12 text-center">Loading document…</div>;
+    return <div className="text-sm text-(--marine) py-12 text-center">{t.projectDetail.pdfFlipbook.loading}</div>;
   }
 
   if (status === "error") {
     return (
-      <div className="text-sm text-red-500 py-12 text-center">
-        Couldn't load the PDF.{" "}
+      <div className="text-sm text-(--state-red) py-12 text-center">
+        {t.projectDetail.pdfFlipbook.error.didntLoad} {" "}
         <a href={src} className="underline" target="_blank" rel="noreferrer">
-          Open it directly instead
+          {t.projectDetail.pdfFlipbook.error.openInstead}
         </a>
         .
       </div>
@@ -233,21 +240,28 @@ export default function PdfFlipbookJs({ src }) {
             <PdfPageLoader pageHeight={coverAspectHeight ? `${coverAspectHeight}px` : "300px"} />
           )}
         </div>
-        <a
+        {/* <a
           href={src}
           target="_blank"
           rel="noreferrer"
           className="px-5 py-2 rounded-full border border-gray-300 text-sm hover:bg-gray-50 transition"
         >
           Open document
-        </a>
+        </a> */}
+        <Button 
+          text={t.projectDetail.pdfFlipbook.ready.openDoc}
+          icon={ExternalLink}
+          variant="primary"
+          textSize="small"
+          href={src}
+        />
       </div>
     );
   }
 
   // DESKTOP/TABLET: full flipbook.
   return (
-    <div ref={setWrapperEl} className="w-full min-w-0 flex flex-col items-center gap-6 relative">
+    <div ref={setWrapperEl} className="w-full min-w-0 flex flex-col items-center gap-10 relative">
       <div className="relative w-full" style={{ height: computedHeight }}>
         <div
           key={flipbookKey}
@@ -267,13 +281,28 @@ export default function PdfFlipbookJs({ src }) {
         </div>
       </div>
 
-      <div className="flex gap-4">
-        <button ref={prevBtnRef} className="p-2 px-4 rounded-full border border-gray-200 hover:bg-gray-50 transition text-sm">
-          ← Previous
-        </button>
-        <button ref={nextBtnRef} className="p-2 px-4 rounded-full border border-gray-200 hover:bg-gray-50 transition text-sm">
-          Next →
-        </button>
+      <div className="flex gap-6">
+        <Button 
+          ref={prevBtnRef}
+          text={t.projectDetail.pdfFlipbook.ready.previous}
+          icon={ArrowLeft}
+          variant="secondary"
+          textSize="small"
+        />
+        <Button 
+          text={t.projectDetail.pdfFlipbook.ready.openDoc}
+          icon={ExternalLink}
+          variant="primary"
+          textSize="small"
+          href={src}
+        />
+        <Button 
+          ref={nextBtnRef}
+          text={t.projectDetail.pdfFlipbook.ready.next}
+          icon={ArrowRight}
+          variant="secondary"
+          textSize="small"
+        />
       </div>
     </div>
   );

@@ -32,6 +32,20 @@
       "noResults": "Aucun projet trouvé pour ce filtre."
     }
   },
+  "projectDetail": {
+    "pdfFlipbook": {
+      "loading": "Loading document…",
+      "error": {
+        "didntLoad": "Couldn't load the PDF.",
+        "openInstead": "Open it directly instead"
+      },
+      "ready": {
+        "openDoc": "Open document",
+        "previous": "Previous",
+        "next": "Next"
+      }
+    }
+  },
   "footer": {
     "copyright": "© 2026. Tout droits réservés.",
     "contactTitle": "Contact",
