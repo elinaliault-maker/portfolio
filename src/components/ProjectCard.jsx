@@ -1,5 +1,6 @@
-import { Link } from "react-router"
+import { Link, useParams } from "react-router"
 import IndividualTag from "./IndividualTag"
+import { getUiTranslation } from "../utils/getUiTranslation";
 
 export default function ProjectCard({
     index,
@@ -13,8 +14,11 @@ export default function ProjectCard({
     description,
     types,
 }) {
+    const { lang } = useParams();
+    const t = getUiTranslation(lang);
+
     const meta = isSchool
-        ? `Projet scolaire  ✽  ${orgName}  ✽  ${endDate}`
+        ? `${t.projects.card.isSchool}  ✽  ${orgName}  ✽  ${endDate}`
         : `${orgName}  ✽  ${endDate}`;
 
     return (

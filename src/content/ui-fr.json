@@ -30,6 +30,9 @@
       "all": "Tous",
       "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Game design"],
       "noResults": "Aucun projet trouvé pour ce filtre."
+    },
+    "card": {
+      "isSchool": "Projet scolaire"
     }
   },
   "projectDetail": {
