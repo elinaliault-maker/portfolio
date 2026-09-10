@@ -15,6 +15,8 @@ export function LanguageDropdown({ isOpen, onToggle, onClose }) {
     };
 
     useEffect(() => {
+        if (!isOpen) return; // only listen while THIS dropdown is actually open
+
         function handleClickOutside(event) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 onClose();
@@ -22,7 +24,7 @@ export function LanguageDropdown({ isOpen, onToggle, onClose }) {
         }
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, [onClose]);
+    }, [isOpen, onClose]);
 
     const handleSelect = (newLang) => {
         onClose();

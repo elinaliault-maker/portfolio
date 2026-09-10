@@ -15,9 +15,10 @@ function HeaderLogo({ lang }) {
     )
 }
 
-function HeaderLink({ text, url, end = false }) {
+function HeaderLink({ text, url, end = false, onClick }) {
     return (
-        <NavLink to={url} end={end} className={({ isActive }) => 
+        <NavLink to={url} end={end} onClick={onClick}
+        className={({ isActive }) => 
             `w-fit px-1 font-(family-name:--font-text) 
             ${isActive ? `text-(--light-gray) bg-(--marine)`
             : `text-(--marine) bg-none`}
@@ -89,8 +90,8 @@ export default function Header() {
                 flex flex-col gap-2 p-4 bg-(--light-gray) z-50
                 border-2 border-(--marine-clair) shadow-(--shadow-marine)
                 items-start w-fit text-sm">
-                    <HeaderLink text={t.nav.home} url={`/${lang}/`} onClick={closeAll} />
-                    <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} onClick={closeAll} />
+                    <HeaderLink text={t.nav.home} url={`/${lang}/`} end onClick={closeAll} />
+                    <HeaderLink text={t.nav.projects} url={`/${lang}/projets`} end onClick={closeAll} />
                     <HeaderLink text={t.nav.about} url={`/${lang}/about`} onClick={closeAll} />
                     <HeaderOutsideLink text={t.nav.curriculum.title} url={t.nav.curriculum.url} />
                 </div>
