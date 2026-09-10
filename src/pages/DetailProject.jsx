@@ -36,23 +36,21 @@ export default function CaseStudyPage() {
   const tocSections = project.sections.filter((s) => s.label);
 
   return (
-    <div className="relative">
-      {/* <Hero title={project.title} image={project.hero.image} /> */}
-
-      <div className="flex max-w-7xl mx-auto px-8 gap-16">
-        <aside className="w-64 shrink-0 sticky top-24 h-fit">
+      <div className="flex max-w-7xl gap-16 py-20">
+        <aside className="w-64 shrink-0 sticky top-24 h-fit
+        hidden sm:block">
           <TableOfContents
             sections={tocSections}
             onBack={() => navigate(-1)}
+            projectColor={project.projectColor}
           />
         </aside>
 
-        <main className="flex-1 min-w-0 flex flex-col gap-20 py-20">
+        <main className="flex-1 min-w-0 flex flex-col gap-20 text-(--marine)">
           {project.sections.map((block, i) => (
             <ModuleRenderer key={block.id || i} block={block} />
           ))}
         </main>
       </div>
-    </div>
   );
 }

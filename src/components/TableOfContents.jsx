@@ -1,8 +1,21 @@
-// TableOfContents.jsx
 import { useEffect, useState } from "react";
-// import { ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
-export default function TableOfContents({ sections, onBack }) {
+function handleTocClick(e, id) {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    // keep the URL in sync without letting the router intercept it
+    window.history.pushState(null, "", `#${id}`);
+  }
+}
+
+export default function TableOfContents({ 
+  sections, 
+  onBack,
+  projectColor = "var(--marine-clair)" 
+}) {
   const [activeId, setActiveId] = useState(sections[0]?.id);
 
   useEffect(() => {
@@ -26,31 +39,28 @@ export default function TableOfContents({ sections, onBack }) {
   }, [sections]);
 
   return (
-    <nav className="flex flex-col gap-6">
+    <nav className="flex flex-col gap-7 text-left">
+      <p className="text-5xl"
+      style={{ color: `${projectColor}`}}>✽</p>
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-sm text-gray-600 hover:text-black transition"
+        className="w-fit px-1 flex items-center gap-1 text-sm text-(--marine)
+        bg-none hover:bg-(--marine-clair) transition"
       >
-        {/* <ArrowLeft size={16} />  */}
-        <span 
-            className="font-icon shrink-0  text-[0.5rem]
-            group-hover:text-(--turquoise) group-hover:translate-x-0.5 transition-all duration-300"
-            aria-hidden="true"
-        >
-            {"\uf000"} {/* unicode arrow */}
-        </span>
+        <ArrowLeft size={16} /> 
         Back
       </button>
 
-      <ul className="flex flex-col gap-3 border-l border-gray-200">
+      <ul className="flex flex-col gap-3">
         {sections.map((s) => (
           <li key={s.id}>
             <a
               href={`#${s.id}`}
-              className={`block pl-4 -ml-px border-l-2 text-sm transition ${
+              onClick={(e) => handleTocClick(e, s.id)}
+              className={`block w-fit px-1 text-base transition ${
                 activeId === s.id
-                  ? "border-black text-black font-medium"
-                  : "border-transparent text-gray-400 hover:text-gray-700"
+                  ? "bg-(--marine) text-(--light-gray) hover:bg-(--marine-clair) hover:text-(--marine)"
+                  : "bg-none text-(--marine) hover:bg-(--marine-clair)"
               }`}
             >
               {s.label}

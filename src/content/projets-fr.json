@@ -11,6 +11,7 @@
     },
     {
         "url": "captaine",
+        "projectColor": "#AFDFD5",
         "coverUrl": "/projectsAssets/cover2.jpg",
         "title": "Cap’taine",
         "description": "le jeu collaboratif où l’on fait avec les moyens du bord",
