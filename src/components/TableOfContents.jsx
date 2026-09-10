@@ -57,7 +57,7 @@ export default function TableOfContents({
             <a
               href={`#${s.id}`}
               onClick={(e) => handleTocClick(e, s.id)}
-              className={`block w-fit px-1 text-base transition ${
+              className={`block w-fit px-1 text-sm transition ${
                 activeId === s.id
                   ? "bg-(--marine) text-(--light-gray) hover:bg-(--marine-clair) hover:text-(--marine)"
                   : "bg-none text-(--marine) hover:bg-(--marine-clair)"

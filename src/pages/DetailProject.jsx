@@ -37,7 +37,7 @@ export default function CaseStudyPage() {
 
   return (
       <div className="flex max-w-7xl gap-16 py-20">
-        <aside className="w-64 shrink-0 sticky top-24 h-fit
+        <aside className="w-fit pr-4 shrink-0 sticky top-24 h-fit
         hidden sm:block">
           <TableOfContents
             sections={tocSections}
