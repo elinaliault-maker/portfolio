@@ -13,7 +13,7 @@ export default function LayoutPage() {
     <>
     <div
         className="min-h-screen flex flex-col items-center text-center
-        px-8 sm:px-10 md:px-16 lg:px-60 xl:px-60 2xl:px-80
+        px-8 sm:px-10 md:px-16 lg:px-60 xl:px-60 2xl:px-60
         bg-[url(/texture/noise-tile.png)] bg-center bg-repeat"
     >
       <Header />
