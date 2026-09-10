@@ -36,6 +36,10 @@
     }
   },
   "projectDetail": {
+    "notFound": {
+      "error": "Projet introuvable / Project not found",
+      "return": "Retourner aux projets"
+    },
     "pdfFlipbook": {
       "loading": "Loading document…",
       "error": {
