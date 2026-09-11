@@ -94,7 +94,8 @@ export default function Home() {
           <span 
               className="text-[4rem] text-(--marine-clair) 
               absolute -top-11 -right-8.5
-              rotate-[-16deg]"
+              rotate-[-16deg]
+              hidden sm:inline"
               aria-hidden="true"
           >
               ✽

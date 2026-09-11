@@ -60,7 +60,8 @@ export default function Projects() {
                     <span 
                         className="text-[4rem] text-(--marine-clair) 
                         absolute -top-6.5 -right-8.5
-                        rotate-[-16deg]"
+                        rotate-[-16deg]
+                        hidden sm:inline"
                         aria-hidden="true"
                     >
                         ✽
