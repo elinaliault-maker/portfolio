@@ -4,6 +4,8 @@ import ImageBlock from "./ImageBlock";
 import ImageGrid from "./ImageGrid";
 import VideoBlock from "./VideoBlock";
 import PdfFlipbook from "./pdfModule/PdfFlipbook";
+import ScrollIndicator from "./ScrollIndicator";
+import ListBlock from "./List";
 
 export const moduleRegistry = {
   overview: Overview,
@@ -12,4 +14,6 @@ export const moduleRegistry = {
   imageGrid: ImageGrid,
   video: VideoBlock,
   pdf: PdfFlipbook,
+  scrollIndicator: ScrollIndicator,
+  list: ListBlock,
 };

@@ -1,6 +1,6 @@
 import { Mouse } from "lucide-react";
 
-export function ScrollIndicator({ leftText, rightText }) {
+export default function ScrollIndicator({ leftText, rightText }) {
     return (
         <div className="flex items-center justify-center gap-4 px-2
         font-(family-name:--font-text) text-sm text-(--marine)

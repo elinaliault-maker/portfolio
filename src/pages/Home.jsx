@@ -1,7 +1,7 @@
 import { useParams } from "react-router"
 import { getUiTranslation } from "../utils/getUiTranslation"
 import { getProjects } from "../utils/getProjects"
-import { ScrollIndicator } from "../components/modules/ScrollIndicator.jsx"
+import ScrollIndicator from "../components/modules/ScrollIndicator.jsx"
 import { Button } from "../components/Button.jsx"
 import ProjectCard from "../components/ProjectCard.jsx"
 

@@ -33,6 +33,11 @@
             "tools": ["Figma", "dev..."]
             },
             {
+                "type":"scrollIndicator",
+                "leftText": "Scroll vers le bas", 
+                "rightText": "Pour voir les projets"
+            },
+            {
             "type": "titleParagraph",
             "id": "problem",
             "label": "The Problem",
@@ -55,6 +60,16 @@
                 { "src": "/case-studies/playerpursuits/explore-2.jpg", "caption": "Color exploration" },
                 { "src": "/case-studies/playerpursuits/explore-3.jpg" },
                 { "src": "/case-studies/playerpursuits/explore-4.jpg" }
+            ]
+            },
+            {
+            "type": "list",
+            "title": "Key <mark>findings</mark>",
+            "paragraph": "A summary of what we learned from the research phase.",
+            "items": [
+                "Users struggled <mark>to find available</mark> tee times quickly",
+                "Booking confirmation emails were often missed",
+                "Mobile usage was 3x higher than desktop"
             ]
             },
             {
