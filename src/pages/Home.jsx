@@ -71,7 +71,7 @@ export function AboutIntro() {
             {t.home.aboutTitle}</h2>
           <p className="text-lg text-(--marine)">{t.home.aboutText}</p>
           <Button variant="secondary" 
-            text={t.home.aboutButton} href="mailto:elina.liault@gmail.com" />
+            text={t.home.aboutButton} to={`/${lang}/about`} />
         </div>
         <img src={t.home.aboutImg.src} 
         alt={t.home.aboutImg.src} className="max-w-xs"/>
