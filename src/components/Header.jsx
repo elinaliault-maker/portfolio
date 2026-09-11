@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router";
 import { useParams } from "react-router";
 import { getUiTranslation } from "../utils/getUiTranslation";
@@ -47,10 +47,29 @@ export default function Header() {
     const { lang } = useParams();
     const t = getUiTranslation(lang);
     const [openMenu, setOpenMenu] = useState(null); // null | 'nav' | 'lang'
+    const navRef = useRef(null);
+    const hamburgerBtnRef = useRef(null);
 
     const toggleNav = () => setOpenMenu(prev => prev === 'nav' ? null : 'nav');
     const toggleLang = () => setOpenMenu(prev => prev === 'lang' ? null : 'lang');
     const closeAll = () => setOpenMenu(null);
+
+    useEffect(() => {
+        if (openMenu !== 'nav') return; // only listen while the nav menu is actually open
+
+        function handleClickOutside(event) {
+            // ignore clicks on the hamburger button itself — otherwise toggleNav's
+            // own click would immediately get "outside" closed right back
+            if (hamburgerBtnRef.current && hamburgerBtnRef.current.contains(event.target)) {
+                return;
+            }
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                closeAll();
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [openMenu]);
 
     return (
         <nav className="z-100 w-full py-6 text-base relative">
@@ -75,6 +94,7 @@ export default function Header() {
 
                     {/* Hamburger — hidden at/above md */}
                     <button
+                        ref={hamburgerBtnRef}
                         className="md:hidden"
                         onClick={toggleNav}
                         aria-label="Toggle menu"
@@ -86,7 +106,7 @@ export default function Header() {
             </div>
 
             {openMenu === 'nav' && (
-                <div className="md:hidden absolute right-0 mt-2.5
+                <div ref={navRef} className="md:hidden absolute right-0 mt-2.5
                 flex flex-col gap-2 p-4 bg-(--light-gray) z-50
                 border-2 border-(--marine-clair) shadow-(--shadow-marine)
                 items-start w-fit text-sm">
