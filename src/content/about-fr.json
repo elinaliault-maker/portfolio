@@ -34,6 +34,7 @@
       "id": 1,
       "icon": "/aboutPage/liasse360-logo.png",
       "title": "Liasse 360",
+      "relatedOrg": "Liasse 360",
       "subtitle": "UX/UI Designer",
       "date": "Septembre 2024 - Août 2026",
       "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication.",
@@ -46,6 +47,7 @@
       "id": 2,
       "icon": "/aboutPage/maif-logo.png",
       "title": "MAIF",
+      "relatedOrg": "MAIF",
       "subtitle": "UI Designer",
       "date": "Mai - Juillet 2023",
       "description": "Gestion de librairies de pictogrammes et de composants. Maquettage d'email commerciaux."
@@ -54,6 +56,7 @@
       "id": 3,
       "icon": "/aboutPage/meubles-celio-logo.png",
       "title": "Meubles CELIO",
+      "relatedOrg": "Meubles CELIO",
       "subtitle": "Designer graphique",
       "date": "Juillet 2022",
       "description": "Maquettage de goodies et de posts pour les réseaux sociaux. Réalisation de mockups des espace de la marque."
@@ -62,6 +65,7 @@
       "id": 4,
       "icon": "/aboutPage/mairie-niort-logo.png",
       "title": "Mairie de Niort",
+      "relatedOrg": "Mairie de Niort",
       "subtitle": "Designer graphique",
       "date": "Juin 2022",
       "description": "Création d'une charte graphique pour un service interne. Mise en page de la newsletter, d'affiches et de documents internes."
@@ -75,18 +79,16 @@
       "icon": "/aboutPage/gobelins-logo.png",
       "title": "Mastère ECNI",
       "subtitle": "Gobelins Paris",
+      "relatedOrg": "Gobelins Paris",
       "date": "Septembre 2024 - Juin 2026",
-      "description": "...",
-      "relatedProjects": [
-        { "label": "Cap'taine", "url": "/fr/projets/captaine" }, 
-        { "label": "Coolisses" }
-      ]
+      "description": "..."
     },
     {
       "id": 2,
       "icon": "/aboutPage/tourrache-logo.png",
       "title": "DNMADE",
       "subtitle": "Lycée La Tourrache",
+      "relatedOrg": "DNMADE",
       "date": "Septembre 2021 - Juin  2024",
       "description": "..."
     }

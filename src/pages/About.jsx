@@ -1,6 +1,7 @@
 import { useParams } from "react-router"
 import { getUiTranslation } from "../utils/getUiTranslation"
 import { getAbout } from "../utils/getAbout";
+import { getProjects } from "../utils/getProjects";
 import { CollapseItem } from "../components/CollapseItem";
 import { Button } from "../components/Button";
 import { Download, Mail } from "lucide-react";
@@ -19,6 +20,7 @@ export default function About() {
   const { lang } = useParams();
   const t = getUiTranslation(lang);
   const about = getAbout(lang);
+  const projects = getProjects(lang);
 
   return (
     <>
@@ -74,7 +76,11 @@ export default function About() {
                     subtitle={item.subtitle}
                     date={item.date}
                     description={item.description}
-                    relatedProjects={item.relatedProjects}
+                    relatedProjects={getRelatedProjectLinks(
+                        item.relatedOrg, 
+                        projects, 
+                        lang
+                    )}
                     defaultOpen={index === 0} // Keeps the first item open by default like the photo!
                 />
             ))}
@@ -92,11 +98,26 @@ export default function About() {
                     subtitle={item.subtitle}
                     date={item.date}
                     description={item.description}
-                    relatedProjects={item.relatedProjects}
+                    relatedProjects={getRelatedProjectLinks(
+                        item.relatedOrg, 
+                        projects, 
+                        lang
+                    )}
                 />
             ))}
         </div>
       </div>
     </>
   )
+}
+
+function getRelatedProjectLinks(orgName, projects = [], lang = 'fr') {
+    if (!orgName) return [];
+
+    return projects
+        .filter((project) => project.orgName === orgName)
+        .map((project) => ({
+            label: `${project.title} - ${project.description}`,
+            url: `/${lang}/projets/${project.url}`
+        }));
 }
