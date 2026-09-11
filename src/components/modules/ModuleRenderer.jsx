@@ -1,7 +1,7 @@
 // modules/ModuleRenderer.jsx
 import { moduleRegistry } from "./registry";
 
-export default function ModuleRenderer({ block }) {
+export default function ModuleRenderer({ block, t }) {
   const Component = moduleRegistry[block.type];
 
   if (!Component) {
@@ -19,7 +19,7 @@ export default function ModuleRenderer({ block }) {
   console.log(block);
   return (
     <div id={block.id || undefined} className="scroll-mt-24">
-      <Component {...block} />
+      <Component {...block} t={t} />
     </div>
   );
 }

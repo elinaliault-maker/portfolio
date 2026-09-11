@@ -1,17 +1,17 @@
-// import Overview from "./Overview";
+import Overview from "./Overview";
 import SectionTitle from "./SectionTitle";
-// import TitleParagraph from "./TitleParagraph";
-// import ImageBlock from "./ImageBlock";
+import TitleParagraph from "./TitleParagraph";
+import ImageBlock from "./ImageBlock";
 import ImageGrid from "./ImageGrid";
-// import VideoBlock from "./VideoBlock";
+import VideoBlock from "./VideoBlock";
 import PdfFlipbook from "./pdfModule/PdfFlipbook";
 
 export const moduleRegistry = {
-//   overview: Overview,
+  overview: Overview,
   sectionTitle: SectionTitle,
-//   titleParagraph: TitleParagraph,
-//   image: ImageBlock,
+  titleParagraph: TitleParagraph,
+  image: ImageBlock,
   imageGrid: ImageGrid,
-//   video: VideoBlock,
+  video: VideoBlock,
   pdf: PdfFlipbook,
 };

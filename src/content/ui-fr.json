@@ -40,6 +40,12 @@
       "error": "Projet introuvable / Project not found",
       "return": "Retourner aux projets"
     },
+    "overview": {
+      "timeline": "Timeline",
+      "team": "Team",
+      "role": "Rôle",
+      "tools": "Tools"
+    },
     "pdfFlipbook": {
       "loading": "Loading document…",
       "error": {

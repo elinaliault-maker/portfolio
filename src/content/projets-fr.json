@@ -15,6 +15,7 @@
         "coverUrl": "/projectsAssets/cover2.jpg",
         "title": "Cap’taine",
         "description": "le jeu collaboratif où l’on fait avec les moyens du bord",
+        "descriptionWithMark": "le <mark>jeu collaboratif</mark> où l’on fait avec les moyens du bord",
         "isSchool": true,
         "orgName": "Gobelins Paris",
         "endDate": "2026",
@@ -24,25 +25,23 @@
             "type": "overview",
             "id": "overview",
             "label": "Overview",
-            "role": "UI/UX Design",
-            "timeline": "3 months",
-            "tools": ["Figma", "React", "Tailwind"],
-            "summary": "PlayerPursuits helps golfers discover and book tee times at courses near them."
-            },
-            {
-            "type": "sectionTitle",
-            "id": "problem",
-            "label": "The Problem",
-            "title": "Booking a tee time shouldn't feel like homework"
+            "title": "Titre de cette partie",
+            "paragraph": "Pour mon projet professionnel, je me suis orientée vers la réalisation d'un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+            "timeline": "2 mois",
+            "team": "Seule",
+            "role": "DA",
+            "tools": ["Figma", "dev..."]
             },
             {
             "type": "titleParagraph",
+            "id": "problem",
+            "label": "The Problem",
             "title": "Research",
             "paragraph": "We interviewed 12 golfers across 3 clubs to understand..."
             },
             {
             "type": "image",
-            "src": "/case-studies/playerpursuits/research.jpg",
+            "src": "/projectsAssets/cover2.jpg",
             "caption": "Affinity mapping from user interviews",
             "size": "full"
             },

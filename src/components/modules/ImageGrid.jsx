@@ -6,9 +6,9 @@ export default function ImageGrid({ images, columns = 2 }) {
     >
       {images.map((img, i) => (
         <figure key={i}>
-          <img src={img.src} className="w-full rounded-lg" />
+          <img src={img.src} className="w-full" />
           {img.caption && (
-            <figcaption className="text-sm text-gray-500 mt-2">{img.caption}</figcaption>
+            <figcaption className="text-sm text-(--marine)/64 mt-2">{img.caption}</figcaption>
           )}
         </figure>
       ))}

@@ -4,6 +4,7 @@ import { getUiTranslation } from "../utils/getUiTranslation";
 import { Button } from "../components/Button";
 import ModuleRenderer from "../components/modules/ModuleRenderer";
 import TableOfContents from "../components/TableOfContents";
+import ImageBlock from "../components/modules/ImageBlock";
 
 export default function CaseStudyPage() {
     // 1. Grab the ':projetUrl' out of the current URL string
@@ -46,9 +47,16 @@ export default function CaseStudyPage() {
           />
         </aside>
 
-        <main className="flex-1 min-w-0 flex flex-col gap-20 text-(--marine)">
+        <main className="flex-1 min-w-0 flex flex-col gap-5 mb-34 
+        text-(--marine)"
+        style={{ "--project-mark-color": project.projectColor }}>
+          <h1 className="text-3xl sm:text-4xl text-left">
+            <span className="font-(family-name:--heading)">{project.title}</span>
+            {" "} - <span dangerouslySetInnerHTML={{ __html: project.descriptionWithMark }} />
+          </h1>
+          <ImageBlock src={project.coverUrl} />
           {project.sections.map((block, i) => (
-            <ModuleRenderer key={block.id || i} block={block} />
+            <ModuleRenderer key={block.id || i} block={block} t={t} />
           ))}
         </main>
       </div>
