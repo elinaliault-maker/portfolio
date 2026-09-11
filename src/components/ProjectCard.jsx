@@ -28,10 +28,13 @@ export default function ProjectCard({
             text-left"
         >
             {/* Index number */}
-            <span className="text-sm sm:text-base text-(--marine) 
-            font-(family-name:--font-text) mb-2">
-                {String(index).padStart(2, "0")}
-            </span>
+            {index && (
+                <span className="text-sm sm:text-base text-(--marine) 
+                font-(family-name:--font-text) mb-2">
+                    {String(index).padStart(2, "0")}
+                </span>
+            )}
+            
 
             {/* Cover image */}
             <div className="w-full aspect-4/3 overflow-hidden relative

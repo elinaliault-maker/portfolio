@@ -9,6 +9,16 @@
         "endDate": "2026",
         "types": ["Graphisme", "DA", "Motion", "Print", "UI"]
     },
+        {
+        "url": "l360-saas",
+        "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
+        "title": "SaaS",
+        "description": "faire reconnaître la marque dans ses communication",
+        "isSchool": false,
+        "orgName": "Liasse 360",
+        "endDate": "2026",
+        "types": ["Graphisme", "DA", "Motion", "Print", "UI"]
+    },
     {
         "url": "captaine",
         "projectColor": "#AFDFD5",
@@ -21,6 +31,11 @@
         "endDate": "2026",
         "types": ["Game design", "DA", "Narration", "Écriture"],
         "sections": [
+            {
+            "type": "image",
+            "src": "/projectsAssets/cover2.jpg",
+            "size": "full"
+            },
             {
             "type": "overview",
             "id": "overview",

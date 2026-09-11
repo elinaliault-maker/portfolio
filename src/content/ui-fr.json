@@ -57,6 +57,10 @@
         "previous": "Previous",
         "next": "Next"
       }
+    },
+    "otherProjects": {
+      "title": "Also check out...",
+      "backToTop": "Back to top"
     }
   },
   "footer": {
