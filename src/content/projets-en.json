@@ -1,18 +1,74 @@
 [
-    {
-        "projectNumber": 1,
-        "url": "exemple",
-        "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
-        "title": "A communicative software",
-        "detail": "Liasse 360, 2026",
-        "types": ["SaaS", "UI", "UX"]
-    },
-    {
-        "projectNumber": 2,
-        "url": "ex2",
-        "coverUrl": "/projectsAssets/cover2.jpg",
-        "title": "English2",
-        "detail": "MAIF, 2022",
-        "types": ["UI", "UX design"]
-    }
+  {
+    "url": "l360-identity",
+    "projectColor": "#EFD2D2",
+    "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
+    "title": "Visual Identity",
+    "description": "establishing brand recognition across communications",
+    "isSchool": false,
+    "orgName": "Liasse 360",
+    "endDate": "2026",
+    "types": ["Graphic Design", "AD", "Motion", "Print", "UI"],
+    "sections": [
+      {
+        "type": "image",
+        "src": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
+        "size": "full"
+      }
+    ]
+  },
+  {
+    "url": "captaine",
+    "projectColor": "#AFDFD5",
+    "coverUrl": "/projectsAssets/cover2.jpg",
+    "title": "Cap’taine",
+    "description": "the collaborative game where you make do with what you have",
+    "descriptionWithMark": "the <mark>collaborative game</mark> where you make do with what you have",
+    "isSchool": true,
+    "orgName": "Gobelins Paris",
+    "endDate": "2026",
+    "types": ["Game Design", "AD", "Narration", "Writing"],
+    "sections": [
+      {
+        "type": "image",
+        "src": "/projectsAssets/cover2.jpg",
+        "size": "full"
+      },
+      {
+        "type": "overview",
+        "id": "overview",
+        "label": "Overview",
+        "title": "Section Title",
+        "paragraph": "Introductory paragraph",
+        "timeline": "6 months",
+        "team": "Lou CARDON, Fabrizio MANETTI, Aurore SERGENT, Akira VALADE",
+        "role": "AD, Writing, Print",
+        "tools": ["Figma", "Word"]
+      },
+      {
+        "type": "titleParagraph",
+        "id": "problem",
+        "label": "Problem",
+        "title": "Research",
+        "paragraph": "We conducted visual research..."
+      },
+      {
+        "type": "image",
+        "src": "/projectsAssets/cover2.jpg",
+        "caption": "Moodboard",
+        "size": "full"
+      },
+      {
+        "type": "titleParagraph",
+        "id": "regles",
+        "label": "Rules",
+        "title": "Game Rules",
+        "paragraph": "And here is how we came up with these game rules:"
+      },
+      {
+        "type": "pdf",
+        "src": "/projectsAssets/regles-captaine.pdf"
+      }
+    ]
+  }
 ]

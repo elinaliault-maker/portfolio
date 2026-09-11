@@ -4,21 +4,64 @@
     "projects": "Projects",
     "about": "About",
     "curriculum": {
-      "title": "Resume",
+      "title": "CV",
       "url": "https://elinaliault.myportfolio.com/work"
     }
   },
-  "pagesTitle": {
-    "home": "Home",
-    "projects": "Projects"
+  "home": {
+    "pagesTitle": "Home",
+    "scrollDown": "Scroll down", 
+    "scrollToProjects": "To view projects",
+    "recentProjectsTitle": "Recent Projects",
+    "recentProjectsSubtitle": "Here is a selection of my recent projects",
+    "viewAllProjects": "View all projects",
+    "aboutTitle": "I am Elina",
+    "aboutText": "After earning a Master's degree in ECNI from Gobelins Paris, I am currently looking for new career opportunities.",
+    "aboutButton": "More about my background",
+    "aboutImg": {
+      "src": "/homePage/homeAboutIntroPhoto.png",
+      "alt": "Professional photo"
+    }
   },
-  "pagesSubtitle": {
-    "projects": "subtitle"
+  "projects": {
+    "pagesTitle": "Projects",
+    "pagesSubtitle": "Here is a selection of projects I have worked on over the years.",
+    "filters": {
+      "all": "All",
+      "list": ["UI", "UX", "AD", "Graphic Design", "Motion", "Game"],
+      "noResults": "No projects found for this filter."
+    },
+    "card": {
+      "isSchool": "Academic"
+    }
   },
-  "filters": {
-    "all": "All",
-    "list": ["UI", "UX", "DA", "Graphic design", "Motion", "Game design"],
-    "noResults": "No project found for this filter."
+  "projectDetail": {
+    "notFound": {
+      "error": "Project not found",
+      "return": "Return to projects"
+    },
+    "overview": {
+      "timeline": "Duration",
+      "team": "Team",
+      "role": "Role",
+      "tools": "Tools"
+    },
+    "pdfFlipbook": {
+      "loading": "Loading document…",
+      "error": {
+        "didntLoad": "Unable to load PDF.",
+        "openInstead": "Open directly"
+      },
+      "ready": {
+        "openDoc": "Open document",
+        "previous": "Previous",
+        "next": "Next"
+      }
+    },
+    "otherProjects": {
+      "title": "Discover also...",
+      "backToTop": "Back to top"
+    }
   },
   "footer": {
     "copyright": "© 2026. All rights reserved.",

@@ -2,10 +2,10 @@
   "presentation": {
     "HeroImg": {
       "src": "/aboutPage/aboutCvPhoto.png",
-      "alt": "Image"
+      "alt": "Photo professionnelle"
     },
-    "sectionTitle": "Hello, je suis Elina",
-    "paragraph": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "sectionTitle": "Bonjour, je suis Elina",
+    "paragraph": "Je suis designer UX/UI et j'ai pour vocation d'utiliser ma passion pour faire passer des messages.",
     "contactButton": "Me contacter",
     "cvButton": "Télécharger mon CV"
   },
@@ -37,11 +37,7 @@
       "relatedOrg": "Liasse 360",
       "subtitle": "UX/UI Designer",
       "date": "Septembre 2024 - Août 2026",
-      "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication.",
-      "relatedProjects": [
-        { "label": "Charte graphique", "url": "/fr/projets/charte-liasse360" }, 
-        { "label": "Logiciel SaaS" }
-      ]
+      "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication."
     },
     {
       "id": 2,

@@ -1,91 +1,95 @@
 {
- "presentation": {
+  "presentation": {
     "HeroImg": {
       "src": "/aboutPage/aboutCvPhoto.png",
-      "alt": "Image"
+      "alt": "Professional photo"
     },
-    "sectionTitle": "Hello, je suis Elina",
-    "paragraph": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "sectionTitle": "Hello, I am Elina",
+    "paragraph": "I am a UX/UI designer dedicated to using my passion to convey impactful messages.",
     "contactButton": "Contact me",
-    "cvButton": "Download my resume"
+    "cvButton": "Download my CV"
   },
   "skills": {
-  "sectionTitle": "Skills",
-  "content": [
-  {
-    "title": "Design and Creation",
-    "tags": ["UI/UX design", "Design system", "Motion design", "Graphic design",
-    "Artistic direction", "Wireframing", "Prototypage", "Print design"]
-  },
-  {
-    "title": "Tools and Softwares",
-    "tags": ["Figma", "Illustrator", "InDesign", "After Effects", "Premiere Pro",
-    "Photoshop", "Fusion 360"]
-  },
-  {
-    "title": "Programming",
-    "tags": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"]
-  }]
+    "sectionTitle": "Skills",
+    "content": [
+      {
+        "title": "Design & Creation",
+        "tags": ["UI/UX design", "Design system", "Motion design", "Graphic design",
+        "Art direction", "Wireframing", "Prototyping", "Print design"]
+      },
+      {
+        "title": "Tools & Software",
+        "tags": ["Figma", "Illustrator", "InDesign", "After Effects", "Premiere Pro",
+        "Photoshop", "Fusion 360"]
+      },
+      {
+        "title": "Development & Technology",
+        "tags": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"]
+      }
+    ]
   },
   "work": {
-    "sectionTitle": "Work experience",
-    "content": [{
+    "sectionTitle": "Experience",
+    "content": [
+      {
         "id": 1,
         "icon": "/aboutPage/liasse360-logo.png",
         "title": "Liasse 360",
+        "relatedOrg": "Liasse 360",
         "subtitle": "UX/UI Designer",
         "date": "September 2024 - August 2026",
-        "description": "Supporting the product development by designing the software's user interface and creating communication visuals."
-        },
-        {
+        "description": "User interface design for the software application. Creation of marketing communication materials."
+      },
+      {
         "id": 2,
         "icon": "/aboutPage/maif-logo.png",
         "title": "MAIF",
+        "relatedOrg": "MAIF",
         "subtitle": "UI Designer",
-        "date": "Mai - July 2023",
-        "description": "Participating to the design system's icon and component libraries. Designing marketing emails."
-        },
-        {
+        "date": "May - July 2023",
+        "description": "Management of pictogram and component libraries. Layout and design of commercial marketing emails."
+      },
+      {
         "id": 3,
         "icon": "/aboutPage/meubles-celio-logo.png",
         "title": "Meubles CELIO",
+        "relatedOrg": "Meubles CELIO",
         "subtitle": "Graphic Designer",
         "date": "July 2022",
-        "description": "Creating mockups for promotional items and the brand's spaces. Designing social media posts."
-        },
-        {
+        "description": "Design layouts for promotional items and social media posts. Creation of brand space mockups."
+      },
+      {
         "id": 4,
         "icon": "/aboutPage/mairie-niort-logo.png",
         "title": "Mairie de Niort",
+        "relatedOrg": "Mairie de Niort",
         "subtitle": "Graphic Designer",
         "date": "June 2022",
-        "description": "Creation of a visual identity for an internal department. Designing the newsletter, posters, and internal documents."
-    }]
+        "description": "Creation of a brand identity for an internal department. Page layout for newsletters, posters, and internal documents."
+      }
+    ]
   },
   "school": {
     "sectionTitle": "Education",
     "content": [
-    {
-      "id": 1,
-      "icon": "/aboutPage/gobelins-logo.png",
-      "title": "Mastère ECNI",
-      "subtitle": "Gobelins Paris",
-      "date": "September 2024 - June 2026",
-      "description": "...",
-      "relatedProjects": [
-        { "label": "Cap'taine", "url": "/fr/projets/captaine" }, 
-        { "label": "Coolisses" }
-      ]
-    },
-    {
-      "id": 2,
-      "icon": "/aboutPage/tourrache-logo.png",
-      "title": "DNMADE",
-      "subtitle": "Lycée La Tourrache",
-      "date": "September 2021 - June  2024",
-      "description": "..."
-    }
+      {
+        "id": 1,
+        "icon": "/aboutPage/gobelins-logo.png",
+        "title": "Master's Degree ECNI",
+        "subtitle": "Gobelins Paris",
+        "relatedOrg": "Gobelins Paris",
+        "date": "September 2024 - June 2026",
+        "description": "..."
+      },
+      {
+        "id": 2,
+        "icon": "/aboutPage/tourrache-logo.png",
+        "title": "DNMADE",
+        "subtitle": "Lycée La Tourrache",
+        "relatedOrg": "DNMADE",
+        "date": "September 2021 - June 2024",
+        "description": "..."
+      }
     ]
   }
-  
 }

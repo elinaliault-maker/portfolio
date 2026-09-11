@@ -1,23 +1,21 @@
 [
     {
         "url": "l360-identity",
+        "projectColor": "#EFD2D2",
         "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
         "title": "Identité visuelle",
         "description": "faire reconnaître la marque dans ses communication",
         "isSchool": false,
         "orgName": "Liasse 360",
         "endDate": "2026",
-        "types": ["Graphisme", "DA", "Motion", "Print", "UI"]
-    },
-        {
-        "url": "l360-saas",
-        "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
-        "title": "SaaS",
-        "description": "faire reconnaître la marque dans ses communication",
-        "isSchool": false,
-        "orgName": "Liasse 360",
-        "endDate": "2026",
-        "types": ["Graphisme", "DA", "Motion", "Print", "UI"]
+        "types": ["Graphisme", "DA", "Motion", "Print", "UI"],
+        "sections": [
+            {
+            "type": "image",
+            "src": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
+            "size": "full"
+            }
+        ]
     },
     {
         "url": "captaine",
@@ -29,7 +27,7 @@
         "isSchool": true,
         "orgName": "Gobelins Paris",
         "endDate": "2026",
-        "types": ["Game design", "DA", "Narration", "Écriture"],
+        "types": ["Design de jeu", "DA", "Narration", "Écriture"],
         "sections": [
             {
             "type": "image",
@@ -41,64 +39,34 @@
             "id": "overview",
             "label": "Overview",
             "title": "Titre de cette partie",
-            "paragraph": "Pour mon projet professionnel, je me suis orientée vers la réalisation d'un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
-            "timeline": "2 mois",
-            "team": "Seule",
-            "role": "DA",
-            "tools": ["Figma", "dev..."]
-            },
-            {
-                "type":"scrollIndicator",
-                "leftText": "Scroll vers le bas", 
-                "rightText": "Pour voir les projets"
+            "paragraph": "Paragraph d'introduction",
+            "timeline": "6 mois",
+            "team": "Lou CARDON, Fabrizio MANETTI, Aurore SERGENT, Akira VALADE",
+            "role": "DA, Écriture, Print",
+            "tools": ["Figma", "Word"]
             },
             {
             "type": "titleParagraph",
             "id": "problem",
-            "label": "The Problem",
-            "title": "Research",
-            "paragraph": "We interviewed 12 golfers across 3 clubs to understand..."
+            "label": "Problem",
+            "title": "Recherche",
+            "paragraph": "On a fait des recherches graphiques..."
             },
             {
             "type": "image",
             "src": "/projectsAssets/cover2.jpg",
-            "caption": "Affinity mapping from user interviews",
+            "caption": "Moodboard",
             "size": "full"
             },
             {
-            "type": "imageGrid",
-            "id": "explorations",
-            "label": "Explorations",
-            "columns": 2,
-            "images": [
-                { "src": "/case-studies/playerpursuits/explore-1.jpg", "caption": "Early wireframe" },
-                { "src": "/case-studies/playerpursuits/explore-2.jpg", "caption": "Color exploration" },
-                { "src": "/case-studies/playerpursuits/explore-3.jpg" },
-                { "src": "/case-studies/playerpursuits/explore-4.jpg" }
-            ]
-            },
-            {
-            "type": "list",
-            "title": "Key <mark>findings</mark>",
-            "paragraph": "A summary of what we learned from the research phase.",
-            "items": [
-                "Users struggled <mark>to find available</mark> tee times quickly",
-                "Booking confirmation emails were often missed",
-                "Mobile usage was 3x higher than desktop"
-            ]
-            },
-            {
-            "type": "video",
-            "id": "prototype",
-            "label": "Prototype",
-            "src": "/case-studies/playerpursuits/demo.mp4",
-            "poster": "/case-studies/playerpursuits/demo-poster.jpg",
-            "caption": "Final booking flow prototype"
+            "type": "titleParagraph",
+            "id": "regles",
+            "label": "Règles",
+            "title": "Les règles du jeu",
+            "paragraph": "Et voila comment on est arrivé à ces règles du jeu :"
             },
             {
             "type": "pdf",
-            "id": "styleguide",
-            "label": "Style Guide",
             "src": "/projectsAssets/regles-captaine.pdf"
             }
         ]

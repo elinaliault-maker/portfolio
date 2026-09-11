@@ -10,57 +10,57 @@
   },
   "home": {
     "pagesTitle": "Accueil",
-    "recentProjectsTitle": "Projets récents",
     "scrollDown": "Scroll vers le bas", 
     "scrollToProjects": "Pour voir les projets",
-    "recentProjectsSubtitle": "Showcase of some of my recent designs",
+    "recentProjectsTitle": "Projets récents",
+    "recentProjectsSubtitle": "Voici une sélection de mes récents projets",
     "viewAllProjects": "Voir tout les projets",
     "aboutTitle": "Je suis Elina",
-    "aboutText": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
-    "aboutButton": "More about my path",
+    "aboutText": "Après un master ECNI à Gobelin Paris, je suis à la recherche d'une opportunité d'emploi.",
+    "aboutButton": "Plus sur mon parcours",
     "aboutImg": {
       "src": "/homePage/homeAboutIntroPhoto.png",
-      "alt": "Image"
+      "alt": "Photo professionnelle"
     }
   },
   "projects": {
     "pagesTitle": "Projets",
-    "pagesSubtitle": "Pour mon projet professionnel, je me suis orientée vers la réalisation d’un support de communication présentant le design collaboratif, les différentes méthodes de création qui lui sont liées",
+    "pagesSubtitle": "Voici une selection des projets auxquels j'au eu l'occasion de participé au cours des années.",
     "filters": {
       "all": "Tous",
-      "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Game design"],
+      "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Jeu"],
       "noResults": "Aucun projet trouvé pour ce filtre."
     },
     "card": {
-      "isSchool": "Projet scolaire"
+      "isSchool": "Scolaire"
     }
   },
   "projectDetail": {
     "notFound": {
-      "error": "Projet introuvable / Project not found",
+      "error": "Projet introuvable",
       "return": "Retourner aux projets"
     },
     "overview": {
-      "timeline": "Timeline",
-      "team": "Team",
+      "timeline": "Durée",
+      "team": "Équipe",
       "role": "Rôle",
-      "tools": "Tools"
+      "tools": "Outils"
     },
     "pdfFlipbook": {
-      "loading": "Loading document…",
+      "loading": "Chargement du document…",
       "error": {
-        "didntLoad": "Couldn't load the PDF.",
-        "openInstead": "Open it directly instead"
+        "didntLoad": "Impossible de charger le PDF.",
+        "openInstead": "Ouvrez-le directement"
       },
       "ready": {
-        "openDoc": "Open document",
-        "previous": "Previous",
-        "next": "Next"
+        "openDoc": "Ouvrir le document",
+        "previous": "Précédent",
+        "next": "Suivant"
       }
     },
     "otherProjects": {
-      "title": "Also check out...",
-      "backToTop": "Back to top"
+      "title": "Découvrez aussi...",
+      "backToTop": "Haut de page"
     }
   },
   "footer": {
