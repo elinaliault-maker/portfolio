@@ -27,7 +27,7 @@ function RecentProjects() {
             </div>
 
             {/* Project grid — same layout as the full Projects page */}
-            <div className="grid grid-cols-1 md:grid-cols-2
+            <div className="grid grid-cols-1 sm:grid-cols-2
             gap-12 md:gap-18 mb-20">
                 {recentProjects.map((project, index) => (
                     <ProjectCard

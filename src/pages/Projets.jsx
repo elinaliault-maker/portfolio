@@ -90,7 +90,7 @@ export default function Projects() {
             </div>
 
             {filteredProjects.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 
+                <div className="grid grid-cols-1 sm:grid-cols-2 
                 gap-12 md:gap-18 mb-20">
                     {filteredProjects.map((project, index) => (
                         <ProjectCard
