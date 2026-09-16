@@ -50,7 +50,7 @@ body::selection {
 }
 
 mark {
-  background-color: var(--project-mark-color, --marine-clair); /* fallback if unset */
+  background-color: var(--project-mark-color, #C3D2E6); /* fallback if unset */
   color: var(--marine);
 }
 

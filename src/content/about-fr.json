@@ -5,7 +5,7 @@
       "alt": "Photo professionnelle"
     },
     "sectionTitle": "Bonjour, je suis Elina",
-    "paragraph": "Je suis designer UX/UI et j'ai pour vocation d'utiliser ma passion pour faire passer des messages.",
+    "paragraph": "En tant que designer UX/UI, je souhaite accompagner par le design les utilisateurs de supports digitaux grâce à la réflexion sur le parcours et l’expérience utilisateur, l’ergonomie et le graphisme.",
     "contactButton": "Me contacter",
     "cvButton": "Télécharger mon CV"
   },
@@ -14,8 +14,8 @@
   "content": [
   {
     "title": "Design et Création",
-    "tags": ["UI/UX design", "Design système", "Motion design", "Design graphique",
-    "Direction artistique", "Wireframing", "Prototypage", "Design print"]
+    "tags": ["UX/UI design", "Design graphique","Direction artistique", "Design système", 
+    "Motion design", "Wireframing", "Prototypage", "Design print"]
   },
   {
     "title": "Outils et Logiciels",
@@ -37,7 +37,7 @@
       "relatedOrg": "Liasse 360",
       "subtitle": "UX/UI Designer",
       "date": "Septembre 2024 - Août 2026",
-      "description": "Conception de l'interface utilisateur du logiciel. Création des visuels de communication."
+      "description": "Création de la charte graphique et des visuels de communication de la marque. Conception de l'interface et de l'expérience utilisateur du logiciel SaaS et du site vitrine."
     },
     {
       "id": 2,
@@ -46,7 +46,7 @@
       "relatedOrg": "MAIF",
       "subtitle": "UI Designer",
       "date": "Mai - Juillet 2023",
-      "description": "Gestion de librairies de pictogrammes et de composants. Maquettage d'email commerciaux."
+      "description": "Gestion de librairies de pictogrammes et de composants. Création et retouches de pictogrammes. Maquettage d'email commerciaux."
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
       "relatedOrg": "Meubles CELIO",
       "subtitle": "Designer graphique",
       "date": "Juillet 2022",
-      "description": "Maquettage de goodies et de posts pour les réseaux sociaux. Réalisation de mockups des espace de la marque."
+      "description": "Maquettage de goodies et de posts pour les réseaux sociaux. Réalisation de mockups des éléments graphiques prévus pour les espaces de la marque."
     },
     {
       "id": 4,
@@ -73,20 +73,20 @@
     {
       "id": 1,
       "icon": "/aboutPage/gobelins-logo.png",
-      "title": "Mastère ECNI",
+      "title": "Expert en Création Numérique Interactive",
       "subtitle": "Gobelins Paris",
       "relatedOrg": "Gobelins Paris",
       "date": "Septembre 2024 - Juin 2026",
-      "description": "..."
+      "description": "Cette formation (RNCP niveau 7) m'a permis d'affiner mes compétences et de réaliser des projects variés en équipes."
     },
     {
       "id": 2,
       "icon": "/aboutPage/tourrache-logo.png",
-      "title": "DNMADE",
+      "title": "DNMADE Supports émergents",
       "subtitle": "Lycée La Tourrache",
       "relatedOrg": "DNMADE",
       "date": "Septembre 2021 - Juin  2024",
-      "description": "..."
+      "description": "Durant la préparation de ce diplôme national (grade licence), j'ai appris les bases du design avec une spécialisation de design numérique."
     }
     ]
   }

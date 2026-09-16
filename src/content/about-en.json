@@ -5,7 +5,7 @@
       "alt": "Professional photo"
     },
     "sectionTitle": "Hello, I am Elina",
-    "paragraph": "I am a UX/UI designer dedicated to using my passion to convey impactful messages.",
+    "paragraph": "As a UX/UI designer, I aim to support users of digital media through design by focusing on user journeys, user experience, ergonomics, and graphic design.",
     "contactButton": "Contact me",
     "cvButton": "Download my CV"
   },
@@ -14,8 +14,8 @@
     "content": [
       {
         "title": "Design & Creation",
-        "tags": ["UI/UX design", "Design system", "Motion design", "Graphic design",
-        "Art direction", "Wireframing", "Prototyping", "Print design"]
+        "tags": ["UX/UI design", "Graphic design", "Art direction", "Design system", 
+        "Motion design", "Wireframing", "Prototyping", "Print design"]
       },
       {
         "title": "Tools & Software",
@@ -38,7 +38,7 @@
         "relatedOrg": "Liasse 360",
         "subtitle": "UX/UI Designer",
         "date": "September 2024 - August 2026",
-        "description": "User interface design for the software application. Creation of marketing communication materials."
+        "description": "Creation of the brand identity and communication visuals. Design of the user interface and experience for the SaaS software and showcase website."
       },
       {
         "id": 2,
@@ -47,7 +47,7 @@
         "relatedOrg": "MAIF",
         "subtitle": "UI Designer",
         "date": "May - July 2023",
-        "description": "Management of pictogram and component libraries. Layout and design of commercial marketing emails."
+        "description": "Management of pictogram and component libraries. Creation and editing of icons. Layout design for commercial marketing emails."
       },
       {
         "id": 3,
@@ -56,7 +56,7 @@
         "relatedOrg": "Meubles CELIO",
         "subtitle": "Graphic Designer",
         "date": "July 2022",
-        "description": "Design layouts for promotional items and social media posts. Creation of brand space mockups."
+        "description": "Designing goodies and social media posts. Creating mockups of graphic elements intended for the brand's physical spaces."
       },
       {
         "id": 4,
@@ -65,7 +65,7 @@
         "relatedOrg": "Mairie de Niort",
         "subtitle": "Graphic Designer",
         "date": "June 2022",
-        "description": "Creation of a brand identity for an internal department. Page layout for newsletters, posters, and internal documents."
+        "description": "Creation of a brand identity for an internal department. Page layout for the newsletter, posters, and internal documents."
       }
     ]
   },
@@ -75,20 +75,20 @@
       {
         "id": 1,
         "icon": "/aboutPage/gobelins-logo.png",
-        "title": "Master's Degree ECNI",
+        "title": "Expert in Interactive Digital Creation",
         "subtitle": "Gobelins Paris",
         "relatedOrg": "Gobelins Paris",
         "date": "September 2024 - June 2026",
-        "description": "..."
+        "description": "This program (RNCP Level 7) allowed me to refine my skills and complete various team projects."
       },
       {
         "id": 2,
         "icon": "/aboutPage/tourrache-logo.png",
-        "title": "DNMADE",
+        "title": "DNMADE Emerging Media",
         "subtitle": "Lycée La Tourrache",
         "relatedOrg": "DNMADE",
         "date": "September 2021 - June 2024",
-        "description": "..."
+        "description": "During this national degree program (bachelor's grade), I learned the fundamentals of design with a specialization in digital design."
       }
     ]
   }

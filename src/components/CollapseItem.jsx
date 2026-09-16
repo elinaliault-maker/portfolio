@@ -120,9 +120,10 @@ export function CollapseItem({
                 }`}
             >
                 <div className="overflow-hidden flex flex-col gap-3">
-                    <p className="text-left m-0 text-sm sm:text-base text-(--marine)">
-                        {description}
-                    </p>
+                    <p
+                    className="text-left m-0 text-sm sm:text-base text-(--marine)"
+                    dangerouslySetInnerHTML={{ __html: description }}
+                    />
 
                     {relatedProjects.length > 0 && (
                         <div className="flex flex-col gap-3">
