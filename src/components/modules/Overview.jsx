@@ -16,13 +16,16 @@ export default function Overview({ title, paragraph, timeline, team, role, tools
       )}
 
       {descriptors.length > 0 && (
-        <dl className="flex flex-col gap-2 mt-4">
-          {descriptors.map((d) => (
+        <dl className="flex flex-col gap-3 mt-4">
+          {descriptors.map((d) => {
+          const value = Array.isArray(d.value) ? d.value.join(", ") : d.value;
+          return (
             <div key={d.label} className="flex gap-4">
               <dt className="w-24 shrink-0 text-(--marine)/64">{d.label}</dt>
-              <dd>{Array.isArray(d.value) ? d.value.join(", ") : d.value}</dd>
+              <dd dangerouslySetInnerHTML={{ __html: value }} />
             </div>
-          ))}
+          );
+        })}
         </dl>
       )}
     </div>

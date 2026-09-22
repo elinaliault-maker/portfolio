@@ -1,7 +1,7 @@
 export default function ImageGrid({ images, columns = 2 }) {
   return (
     <div
-      className="grid gap-6"
+      className="grid gap-5"
       style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
     >
       {images.map((img, i) => (

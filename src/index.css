@@ -52,6 +52,7 @@ body::selection {
 mark {
   background-color: var(--project-mark-color, #C3D2E6); /* fallback if unset */
   color: var(--marine);
+  padding-inline: 2px;
 }
 
 /* #root {

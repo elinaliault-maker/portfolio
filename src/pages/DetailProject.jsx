@@ -53,7 +53,9 @@ export default function CaseStudyPage() {
         style={{ "--project-mark-color": project.projectColor }}>
           <h1 className="text-3xl sm:text-4xl text-left">
             <span className="font-(family-name:--heading)">{project.title}</span>
-            {" "} - <span dangerouslySetInnerHTML={{ __html: project.descriptionWithMark }} />
+            {" "} <span className="text-2xl sm:text-3xl text-(--marine)/64">✽</span> 
+            {" "} <span className="text-2xl sm:text-3xl"
+            dangerouslySetInnerHTML={{ __html: project.descriptionWithMark }} />
           </h1>
           {project.sections.map((block, i) => (
             <ModuleRenderer key={block.id || i} block={block} t={t} />

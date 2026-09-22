@@ -28,11 +28,12 @@
     "pagesSubtitle": "Voici une selection des projets auxquels j'au eu l'occasion de participé au cours des années.",
     "filters": {
       "all": "Tous",
-      "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Jeu"],
+      "list": ["UI", "UX", "DA", "Graphisme", "Motion", "Game"],
       "noResults": "Aucun projet trouvé pour ce filtre."
     },
     "card": {
-      "isSchool": "Ecole"
+      "isSchool": "Ecole",
+      "isWork": "Contrat"
     }
   },
   "projectDetail": {

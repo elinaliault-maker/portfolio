@@ -32,7 +32,8 @@
       "noResults": "No projects found for this filter."
     },
     "card": {
-      "isSchool": "School"
+      "isSchool": "School",
+      "isWork": "Work"
     }
   },
   "projectDetail": {

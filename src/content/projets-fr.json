@@ -2,9 +2,10 @@
     {
         "url": "l360-identity",
         "projectColor": "#EFD2D2",
-        "coverUrl": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
-        "title": "Identité visuelle",
-        "description": "faire reconnaître la marque dans ses communication",
+        "coverUrl": "/projectsAssets/l360-identity/l360-colors.png",
+        "title": "Liasse 360",
+        "description": "Créer une identité visuelle reconnaissable",
+        "descriptionWithMark": "Créer une <mark>identité visuelle</mark> reconnaissable",
         "isSchool": false,
         "orgName": "Liasse 360",
         "endDate": "2026",
@@ -12,26 +13,37 @@
         "sections": [
             {
             "type": "image",
-            "src": "https://cdn.liasse360.fr/static/website/logo/liasse360-couleurs.svg",
+            "src": "/projectsAssets/l360-identity/l360-colors.png",
             "size": "full"
+            },
+            {
+            "type": "overview",
+            "id": "overview",
+            "label": "Overview",
+            "title": "Titre de cette partie",
+            "paragraph": "Paragraph d'introduction",
+            "timeline": "2 ans",
+            "team": "Seule designer </br> Avec la concertation et la validation des associés et du chef de projet",
+            "role": "Conception de la charte graphique </br>Maquettage du site vitrine </br>Réalisation des éléments de communication de la marque",
+            "tools": ["Figma", "Illustrator", "After Effects", "Premier Pro"]
             }
         ]
     },
     {
         "url": "captaine",
         "projectColor": "#AFDFD5",
-        "coverUrl": "/projectsAssets/cover2.jpg",
-        "title": "Cap’taine",
-        "description": "le jeu collaboratif où l’on fait avec les moyens du bord",
-        "descriptionWithMark": "le <mark>jeu collaboratif</mark> où l’on fait avec les moyens du bord",
+        "coverUrl": "/projectsAssets/captaine/cap-boite.png",
+        "title": "Cap'taine",
+        "description": "Le jeu collaboratif où l'on fait avec les moyens du bord",
+        "descriptionWithMark": "Le <mark>jeu collaboratif</mark> où l'on fait avec les moyens du bord",
         "isSchool": true,
         "orgName": "Gobelins Paris",
         "endDate": "2026",
-        "types": ["Design de jeu", "DA", "Narration", "Écriture"],
+        "types": ["Game design", "DA", "Narration", "Écriture"],
         "sections": [
             {
             "type": "image",
-            "src": "/projectsAssets/cover2.jpg",
+            "src": "/projectsAssets/captaine/cap-boite.png",
             "size": "full"
             },
             {
@@ -41,9 +53,9 @@
             "title": "Titre de cette partie",
             "paragraph": "Paragraph d'introduction",
             "timeline": "6 mois",
-            "team": "Lou CARDON, Fabrizio MANETTI, Aurore SERGENT, Akira VALADE",
-            "role": "DA, Écriture, Print",
-            "tools": ["Figma", "Word"]
+            "team": "Designers : Lou CARDON, Aurore SERGENT </br> Développeurs : Fabrizio MANETTI, Akira VALADE",
+            "role": "Participation à la conception du game design et de la direction artistique </br> Écriture de la narration et des règles du jeu </br> Mise en page du livret de règles",
+            "tools": ["Figma", "Indesign"]
             },
             {
             "type": "titleParagraph",
@@ -68,6 +80,349 @@
             {
             "type": "pdf",
             "src": "/projectsAssets/regles-captaine.pdf"
+            }
+        ]
+    },
+    {
+        "url": "coolisses",
+        "projectColor": "#D9CAF1",
+        "coverUrl": "/projectsAssets/coolisses/coolisses-cover.png",
+        "title": "Coolisses",
+        "description": "L'app qui te fait découvrir de nouveau musicians",
+        "descriptionWithMark": "L'app qui te fait <mark>découvrir de nouveau musicians</mark>",
+        "isSchool": true,
+        "orgName": "Gobelins Paris",
+        "endDate": "2025",
+        "types": ["App", "UX/UI design", "DA"],
+        "sections": [
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/coolisses-cover.png",
+            "size": "full"
+            },
+            {
+            "type": "overview",
+            "id": "overview",
+            "label": "Vue d'ensemble",
+            "title": "Titre de cette partie",
+            "paragraph": "Paragraph d'introduction",
+            "timeline": "1 mois",
+            "team": "Designers : Lou CARDON </br> Développeurs : Françoise PHAM, César SAINT-LO",
+            "role": "Participation à la création du concept </br> Participation au design de l'expérience et de l'interface utilisateur",
+            "tools": ["Figma"]
+            },
+            {
+            "type": "titleParagraph",
+            "id": "benchmark",
+            "label": "Benchmark",
+            "title": "Benchmark",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/benchmark2.png",
+            "caption": "Benchmark des application de musique les plus utilisées.",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "problematique",
+            "label": "Problématique",
+            "title": "Problématique",
+            "paragraph": "Comment élargir ses horizons musicaux alors que les applications de players nous gardent dans la même bulle d’écho musicale ?"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "ideation",
+            "label": "Idéation",
+            "title": "Idéation",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/postits.png",
+            "caption": "Benchmark des application de musique les plus utilisées.",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "concept",
+            "label": "Concept",
+            "title": "Concept",
+            "paragraph": "Faire découvrir aux amateurs de musique des jeunes artistes via leur processus de création grâce à une application intimiste pour prendre son temps et créer un lien spécial avec les artistes"
+            },
+            {
+            "type": "titleParagraph",
+            "title": "Personas",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/personas.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "title": "Context d'utilisation",
+            "paragraph": "..."
+            },
+            {
+            "type": "titleParagraph",
+            "title": "Type de contenu",
+            "paragraph": "..."
+            },
+            {
+            "type": "titleParagraph",
+            "title": "Ton",
+            "paragraph": "Intimiste, Respectueuse, Information douce, Exploration contemplative"
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/ton.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "userflow",
+            "label": "Userflow",
+            "title": "Userflow",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/userflow.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "wireframes",
+            "label": "Wireframes",
+            "title": "Wireframes",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/wireframes.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "moodboard",
+            "label": "Moodboard",
+            "title": "Moodboard",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/moodboard.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "da",
+            "label": "DA",
+            "title": "DA",
+            "paragraph": "..."
+            },
+            {
+            "type": "titleParagraph",
+            "id": "ui",
+            "label": "UI",
+            "title": "UI",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/ui.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "tests",
+            "label": "Tests Utilisateurs",
+            "title": "Tests Utilisateurs",
+            "paragraph": "..."
+            },
+            {
+            "type": "titleParagraph",
+            "id": "studio",
+            "label": "Coolisses Studio",
+            "title": "Coolisses Studio",
+            "paragraph": "..."
+            },
+            {
+            "type": "titleParagraph",
+            "id": "bilan",
+            "label": "Bilan",
+            "title": "Bilan",
+            "paragraph": "..."
+            }
+        ]
+    },
+    {
+        "url": "memoire",
+        "coverUrl": "/projectsAssets/memoire-dnmade/memoire-cover.png",
+        "title": "Mémoire",
+        "description": "Mouvements sociaux et Supports de communication",
+        "descriptionWithMark": "<mark>Mouvements sociaux</mark> et Supports de communication",
+        "isSchool": true,
+        "orgName": "DNMADE",
+        "endDate": "2024",
+        "types": ["Documentation", "Écriture", "Mise en page"],
+        "sections": [
+            {
+            "type": "overview",
+            "id": "overview",
+            "label": "Vue d'ensemble",
+            "timeline": "6 mois",
+            "team": "Seule",
+            "role": "Recherches documentaires, Écriture et Mise en page"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "brief",
+            "label": "Brief",
+            "title": "Brief",
+            "paragraph": "En dernière année de DNMADE, il était demandé d'écrire un <mark>mémoire d'environ 15 000 caractères,</mark> sur un sujet choisi en rapport avec la spécialité. Le mémoire devait ensuite être présenté à l'oral devant un jury."
+            },
+            {
+            "type": "titleParagraph",
+            "id": "memoire",
+            "label": "Mémoire",
+            "title": "Mon Mémoire",
+            "paragraph": "Pour cet exercice, j'ai choisi de parler des <mark>supports de communication utilisés par les mouvements sociaux et leurs évolutions depuis l’avènement d'internet.</mark> Pour en savoir plus, découvre ci-dessous mon mémoire :"
+            },
+            {
+            "type": "pdf",
+            "src": "/projectsAssets/memoire-dnmade/livret-memoire.pdf"
+            }
+        ]
+    },
+    {
+        "url": "violet",
+        "projectColor": "#DEC7EA",
+        "coverUrl": "/projectsAssets/violet/violet-cover.png",
+        "title": "Violet",
+        "description": "Illustrer la symbolique d'une couleur",
+        "descriptionWithMark": "Illustrer la <mark>symbolique</mark> d'une couleur",
+        "isSchool": true,
+        "orgName": "DNMADE",
+        "endDate": "2023",
+        "types": ["Motion design", "Sound design"],
+        "sections": [
+            {
+            "type": "overview",
+            "id": "overview",
+            "label": "Vue d'ensemble",
+            "paragraph": "<mark>Comment représenter visuellement la symbolique d'une couleur ?</mark> Telle était la question centrale de ce projet. </br>Ma binôme et moi avons ainsi, par le biai d'un <mark>court métrage de 30 secondes,</mark> tenté de représenter la symbolique de la couleur choisie : le <mark>violet.</mark>",
+            "timeline": "1 semaine",
+            "team": "En binôme avec Daria Molchanova",
+            "role": "Participation à l'idéation et au tournage </br> Montage vidéo et Design sonore",
+            "tools": ["After Effects"]
+            },
+            {
+            "type": "titleParagraph",
+            "id": "research",
+            "label": "Recherche",
+            "title": "Recherche",
+            "paragraph": "Pour commercer, nous avons rassemblé tout les éléments qui nous <mark>faisais penser au violet</mark> et à sa symbolique."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/violet/moodboard.png",
+            "caption": "Moodboard reprenant les différents symboliques du violet.",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "ideation",
+            "label": "Idéation",
+            "title": "Idéation",
+            "paragraph": "En s'appuyant sur les différentes symboliques du violet, nous avons cherché <mark>différentes idées de représentations visuelles.</mark> Quatres scènes en sont ressorties, que nous avons ensuite tournées."
+            },
+            {
+            "type": "imageGrid",
+            "columns": 2,
+            "images": [
+                { "src": "/projectsAssets/violet/poster-video.png", "caption": "Mystère de l'espace" },
+                { "src": "/projectsAssets/violet/flowers.png", "caption": "Tranquillité" },
+                { "src": "/projectsAssets/violet/magic-ball.png", "caption": "Magie & Spiritualité" },
+                { "src": "/projectsAssets/violet/crown.png", "caption": "Royauté" }
+            ]
+            },
+            {
+            "type": "titleParagraph",
+            "id": "assembly",
+            "label": "Montage",
+            "title": "Montage",
+            "paragraph": "Une fois le tournage terminé, j'ai récupéré et trié toutes les <mark>prises</mark> puis je les ai <mark>assemblées</mark>. C'est aussi à ce moment que j'ai réalisé la <mark>sphère magique</mark>. </br>J'ai aussi ajouté les divers petits sons qui permettent de créer une <mark>ambiance sonore</mark> qui vient supporter la représentation visuelle."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/violet/assembly.png",
+            "caption": "Table de montage dans After Effects.",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "final",
+            "label": "Vidéo finale",
+            "title": "Vidéo finale",
+            "paragraph": "Ce processus nous a permis de <mark>représenter la symbolique du violet</mark> via des éléments visuels, animés et sonores, tout en <mark>plongeant le spectateur dans l'univers de cette couleur.</mark>"
+            },
+            {
+            "type": "video",
+            "src": "/projectsAssets/violet/final-video.mp4",
+            "poster": "/projectsAssets/violet/poster-video.png",
+            "caption": "Court métrage sur la symbolique du violet."
+            },
+            {
+            "type": "titleParagraph",
+            "id": "bilan",
+            "label": "Bilan",
+            "title": "Bilan",
+            "paragraph": "En réalisant toutes les étapes de la création d'une vidéo, ce projet m'a permis de me rendre compte de tout ce processus tout en me permettant d'approfondir ma maîtrise d'After Effects."
+            }
+            
+        ]
+    },
+    {
+        "url": "maif",
+        "projectColor": "#FECFD1",
+        "coverUrl": "/projectsAssets/maif/maif-cover.png",
+        "title": "MAIF",
+        "description": "Rapport de stage",
+        "descriptionWithMark": "<mark>Rapport</mark> de stage",
+        "isSchool": false,
+        "orgName": "MAIF",
+        "endDate": "2023",
+        "types": ["UI design", "Design système", "Design email"],
+        "sections": [
+            {
+            "type": "overview",
+            "id": "overview",
+            "label": "Vue d'ensemble",
+            "timeline": "3 mois",
+            "team": "Squad Design Système de la Digital Factory",
+            "role": "Participation à la gestion des librairies de pictogrammes </br> Maquettage d'emails commerciaux",
+            "tools": ["Figma", "Illustrator"]
+            },
+            {
+            "type": "titleParagraph",
+            "id": "missions",
+            "label": "Missions",
+            "title": "Mes missions",
+            "paragraph": "Lors de mon stage à la MAIF, j'ai notamment eu l'opportunité de travailler sur les <mark>librairies de pictogrammes du design system</mark> et de maquetter des <mark>emails commerciaux.</mark> </br></br>Pour en savoir plus sur mes missions, consulte mon rapport de stage :"
+            },
+            {
+            "type": "pdf",
+            "src": "/projectsAssets/maif/maif-rapport.pdf"
             }
         ]
     }

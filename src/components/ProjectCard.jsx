@@ -19,7 +19,7 @@ export default function ProjectCard({
 
     const meta = isSchool
         ? `${t.projects.card.isSchool}  ✽  ${orgName}  ✽  ${endDate}`
-        : `${orgName}  ✽  ${endDate}`;
+        : `${t.projects.card.isWork}  ✽ ${orgName}  ✽  ${endDate}`;
 
     return (
         <Link
@@ -37,7 +37,7 @@ export default function ProjectCard({
             
 
             {/* Cover image */}
-            <div className="w-full aspect-4/3 overflow-hidden relative
+            <div className="w-full aspect-3/2 overflow-hidden relative
             bg-white">
                 <div className="hidden group-hover:block bg-(--marine) mix-blend-screen 
                 z-1 w-full h-full absolute top-0 left-0"></div>
@@ -51,15 +51,17 @@ export default function ProjectCard({
 
             {/* Meta / Title / Description / Tags */}
             <div className="flex flex-col gap-3 sm:gap-4 pt-3 sm:pt-4">
-                <p className="m-0 text-sm sm:text-lg text-(--marine) 
+                <p className="m-0 text-sm sm:text-base text-(--marine) 
                 font-(family-name:--font-text)">
                     {meta}
                 </p>
 
-                <h3 className="text-left mb-1 text-lg sm:text-2xl text-(--marine) 
+                <h3 className="text-left mb-1 text-base sm:text-xl text-(--marine) 
                 font-(family-name:--font-text)">
-                    <span className="font-(family-name:--heading)">
-                        {title}</span> – {description}
+                    <span className="font-(family-name:--heading)
+                    text-lg sm:text-2xl">
+                        {title}</span> {" "}
+                    <span className="text-(--marine)/64">✽</span> {description}
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
