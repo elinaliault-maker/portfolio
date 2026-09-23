@@ -88,12 +88,12 @@
         "projectColor": "#D9CAF1",
         "coverUrl": "/projectsAssets/coolisses/coolisses-cover.png",
         "title": "Coolisses",
-        "description": "L'app qui te fait découvrir de nouveau musicians",
-        "descriptionWithMark": "L'app qui te fait <mark>découvrir de nouveau musicians</mark>",
+        "description": "L'app qui te fait découvrir de nouveau musiciens autrement",
+        "descriptionWithMark": "L'app qui te fait <mark>découvrir de nouveau musiciens</mark> autrement",
         "isSchool": true,
         "orgName": "Gobelins Paris",
         "endDate": "2025",
-        "types": ["App", "UX/UI design", "DA"],
+        "types": ["App", "UX design", "UI design", "DA"],
         "sections": [
             {
             "type": "image",
@@ -104,8 +104,7 @@
             "type": "overview",
             "id": "overview",
             "label": "Vue d'ensemble",
-            "title": "Titre de cette partie",
-            "paragraph": "Paragraph d'introduction",
+            "paragraph": "Coolisses, c'est l'application intimiste qui vous fait <mark>découvrir des artistes émergents via leur processus de création</mark> tout en vous permettant de prendre le temps de créer un lien particulier avec eux.",
             "timeline": "1 mois",
             "team": "Designers : Lou CARDON </br> Développeurs : Françoise PHAM, César SAINT-LO",
             "role": "Participation à la création du concept </br> Participation au design de l'expérience et de l'interface utilisateur",
@@ -116,92 +115,65 @@
             "id": "benchmark",
             "label": "Benchmark",
             "title": "Benchmark",
-            "paragraph": "..."
+            "paragraph": "En analysant les applications de musiques les plus connues, on s'est rendu compte que beaucoup étaient <mark>centrées sur le player</mark> et qu'elles <mark>recommandaient quasiment uniquement des artistes déjà connus.</mark> </br></br>Par ailleurs, on a trouvé que les suggestions étaient <mark>particulièrement dépendantes de la consommation existante</mark> de musique de l'utilisateur, <mark>l'empêchant de sortir de sa zone de confort</mark> et d'expérimenter de nouveaux genres ou artistes."
             },
             {
             "type": "image",
-            "src": "/projectsAssets/coolisses/benchmark2.png",
-            "caption": "Benchmark des application de musique les plus utilisées.",
+            "src": "/projectsAssets/coolisses/benchmark-ecrans.png",
+            "caption": "Analyse d'écrans d'applications de musique.",
             "size": "full"
             },
             {
             "type": "titleParagraph",
-            "id": "problematique",
-            "label": "Problématique",
             "title": "Problématique",
-            "paragraph": "Comment élargir ses horizons musicaux alors que les applications de players nous gardent dans la même bulle d’écho musicale ?"
-            },
-            {
-            "type": "titleParagraph",
-            "id": "ideation",
-            "label": "Idéation",
-            "title": "Idéation",
-            "paragraph": "..."
-            },
-            {
-            "type": "image",
-            "src": "/projectsAssets/coolisses/postits.png",
-            "caption": "Benchmark des application de musique les plus utilisées.",
-            "size": "full"
+            "paragraph": "Nous nous sommes ainsi demandé <mark>comment nous pourrions élargir nos horizons musicaux</mark> alors même que les applications de players nous gardent volontairement dans une bulle d'écho musicale."
             },
             {
             "type": "titleParagraph",
             "id": "concept",
             "label": "Concept",
             "title": "Concept",
-            "paragraph": "Faire découvrir aux amateurs de musique des jeunes artistes via leur processus de création grâce à une application intimiste pour prendre son temps et créer un lien spécial avec les artistes"
+            "paragraph": "Le concept que nous avons tiré de cette problématique consiste à faire découvrir aux amateurs de musique des <mark>jeunes artistes</mark> <mark>via leur processus de création</mark> grâce à une <mark>application intimiste</mark> qui permet de <mark>prendre son temps et de créer un lien spécial avec les artistes.</mark>"
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/name.png",
+            "caption": "Une application qui te fait découvrir les coolisses d'artistes émergents.",
+            "size": "full"
             },
             {
             "type": "titleParagraph",
-            "title": "Personas",
-            "paragraph": "..."
+            "title": "Publics cibles",
+            "paragraph": "L'application s'adresse ainsi tout autant aux <mark>amateurs de musiques</mark> qu'aux <mark>artistes musicaux émergents,</mark> permettant au premier de découvrir des nouveaux artistes et au second de se faire connaître."
             },
             {
             "type": "image",
             "src": "/projectsAssets/coolisses/personas.png",
-            "caption": "...",
+            "caption": "Explication sous forme de personas des deux publics cibles du projet.",
             "size": "full"
             },
             {
             "type": "titleParagraph",
-            "title": "Context d'utilisation",
-            "paragraph": "..."
-            },
-            {
-            "type": "titleParagraph",
-            "title": "Type de contenu",
-            "paragraph": "..."
+            "title": "Type de contenus",
+            "paragraph": "Nous nous sommes inspirés et avons pensé cette application pour qu'elle puisse accueillir des contenus d'un certain type : des <mark>contenus verticaux, relativement courts, montrant les coulisses des artistes</mark> notamment leur processus de création musicale."
             },
             {
             "type": "titleParagraph",
             "title": "Ton",
-            "paragraph": "Intimiste, Respectueuse, Information douce, Exploration contemplative"
+            "paragraph": "Nous avons voulu que cette application permette une expérience <mark>intimiste</mark> tout en étant <mark>respectueuse,</mark> faite <mark>d'information douce</mark> et <mark>d'exploration contemplative.</mark> </br></br> Pour cela, nous nous sommes inspirés de plusieurs applications qui incarnent certains de ces principes, notamment des applis de méditations."
             },
             {
             "type": "image",
-            "src": "/projectsAssets/coolisses/ton.png",
-            "caption": "...",
+            "src": "/projectsAssets/coolisses/applis-ton.png",
+            "caption": "Quelques applications dont nous nous sommes inspirés pour créé notre expérience.",
             "size": "full"
             },
             {
             "type": "titleParagraph",
-            "id": "userflow",
-            "label": "Userflow",
-            "title": "Userflow",
-            "paragraph": "..."
-            },
-            {
-            "type": "image",
-            "src": "/projectsAssets/coolisses/userflow.png",
-            "caption": "...",
-            "size": "full"
-            },
-            {
-            "type": "titleParagraph",
-            "id": "wireframes",
-            "label": "Wireframes",
-            "title": "Wireframes",
-            "paragraph": "..."
+            "id": "ux",
+            "label": "UX",
+            "title": "Expérience Utilisateur",
+            "paragraph": "Nous avons pensé l'application autour d'une fonctionnalité centrale : la découverte d'1 artiste aléatoire par jour. </br></br> Cartographie/Wireframes"
             },
             {
             "type": "image",
@@ -211,8 +183,8 @@
             },
             {
             "type": "titleParagraph",
-            "id": "moodboard",
-            "label": "Moodboard",
+            "id": "da",
+            "label": "DA",
             "title": "Moodboard",
             "paragraph": "..."
             },
@@ -224,10 +196,18 @@
             },
             {
             "type": "titleParagraph",
-            "id": "da",
-            "label": "DA",
             "title": "DA",
             "paragraph": "..."
+            },
+            {
+            "type": "imageGrid",
+            "columns": 2,
+            "images": [
+                { "src": "/projectsAssets/coolisses/animlogo.gif", "caption": "Logo animé" },
+                { "src": "/case-studies/playerpursuits/explore-2.jpg", "caption": "Color exploration" },
+                { "src": "/case-studies/playerpursuits/explore-3.jpg" },
+                { "src": "/case-studies/playerpursuits/explore-4.jpg" }
+            ]
             },
             {
             "type": "titleParagraph",
@@ -247,7 +227,13 @@
             "id": "tests",
             "label": "Tests Utilisateurs",
             "title": "Tests Utilisateurs",
-            "paragraph": "..."
+            "paragraph": "Bla bla bla écriture bla bla. Ces tests nous ont permis entre autre de nous rendre compte que des tutoriels étaient nécessaires pour expliquer certaines interactions à l'utilisateur."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/tutos.png",
+            "caption": "...",
+            "size": "full"
             },
             {
             "type": "titleParagraph",
