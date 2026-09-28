@@ -112,6 +112,13 @@
             },
             {
             "type": "titleParagraph",
+            "id": "brief",
+            "label": "Brief",
+            "title": "Brief",
+            "paragraph": "ici le brief ..."
+            },
+            {
+            "type": "titleParagraph",
             "id": "benchmark",
             "label": "Benchmark",
             "title": "Benchmark",
@@ -186,12 +193,12 @@
             "id": "da",
             "label": "DA",
             "title": "Moodboard",
-            "paragraph": "..."
+            "paragraph": "Inspiré de l'ambiance studio d’enregistrement"
             },
             {
             "type": "image",
             "src": "/projectsAssets/coolisses/moodboard.png",
-            "caption": "...",
+            "caption": "Moodboard de l'ambiance studio d’enregistrement",
             "size": "full"
             },
             {
@@ -200,13 +207,21 @@
             "paragraph": "..."
             },
             {
+            "type": "video",
+            "src": "/projectsAssets/coolisses/animlogo.mp4",
+            "poster": "/projectsAssets/coolisses/animlogo-poster.png",
+            "caption": "Logo animé de l'appli Coolisses",
+            "autoplay": true,
+            "loop": true
+            },
+            {
             "type": "imageGrid",
             "columns": 2,
             "images": [
-                { "src": "/projectsAssets/coolisses/animlogo.gif", "caption": "Logo animé" },
-                { "src": "/case-studies/playerpursuits/explore-2.jpg", "caption": "Color exploration" },
-                { "src": "/case-studies/playerpursuits/explore-3.jpg" },
-                { "src": "/case-studies/playerpursuits/explore-4.jpg" }
+                { "src": "/projectsAssets/coolisses/colors.png" },
+                { "src": "/projectsAssets/coolisses/typos.png"},
+                { "src": "/projectsAssets/coolisses/icons.png" },
+                { "src": "/projectsAssets/coolisses/components.png" }
             ]
             },
             {
@@ -230,10 +245,12 @@
             "paragraph": "Bla bla bla écriture bla bla. Ces tests nous ont permis entre autre de nous rendre compte que des tutoriels étaient nécessaires pour expliquer certaines interactions à l'utilisateur."
             },
             {
-            "type": "image",
-            "src": "/projectsAssets/coolisses/tutos.png",
-            "caption": "...",
-            "size": "full"
+            "type": "video",
+            "src": "/projectsAssets/coolisses/tuto-with-bg.mp4",
+            "poster": "/projectsAssets/coolisses/tuto-poster.png",
+            "caption": "Tutoriel expliquant les interactions.",
+            "autoplay": true,
+            "loop": true
             },
             {
             "type": "titleParagraph",
@@ -241,6 +258,14 @@
             "label": "Coolisses Studio",
             "title": "Coolisses Studio",
             "paragraph": "..."
+            },
+            {
+            "type": "video",
+            "src": "/projectsAssets/coolisses/coolisses-studio-anim.mp4",
+            "poster": "/projectsAssets/coolisses/coolisses-studio-poster.png",
+            "caption": "Logo animé de l'appli Coolisses Studio",
+            "autoplay": true,
+            "loop": true
             },
             {
             "type": "titleParagraph",
