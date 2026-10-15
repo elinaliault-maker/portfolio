@@ -114,14 +114,16 @@
             "type": "titleParagraph",
             "id": "brief",
             "label": "Brief",
-            "title": "Brief",
+            "showSection": true,
+            "title": "Le sujet de ce projet",
             "paragraph": "ici le brief ..."
             },
             {
             "type": "titleParagraph",
             "id": "benchmark",
             "label": "Benchmark",
-            "title": "Benchmark",
+            "showSection": true,
+            "title": "Les applications de musique",
             "paragraph": "En analysant les applications de musiques les plus connues, on s'est rendu compte que beaucoup étaient <mark>centrées sur le player</mark> et qu'elles <mark>recommandaient quasiment uniquement des artistes déjà connus.</mark> </br></br>Par ailleurs, on a trouvé que les suggestions étaient <mark>particulièrement dépendantes de la consommation existante</mark> de musique de l'utilisateur, <mark>l'empêchant de sortir de sa zone de confort</mark> et d'expérimenter de nouveaux genres ou artistes."
             },
             {
@@ -139,7 +141,8 @@
             "type": "titleParagraph",
             "id": "concept",
             "label": "Concept",
-            "title": "Concept",
+            "showSection": true,
+            "title": "Pitch",
             "paragraph": "Le concept que nous avons tiré de cette problématique consiste à faire découvrir aux amateurs de musique des <mark>jeunes artistes</mark> <mark>via leur processus de création</mark> grâce à une <mark>application intimiste</mark> qui permet de <mark>prendre son temps et de créer un lien spécial avec les artistes.</mark>"
             },
             {
@@ -178,7 +181,8 @@
             {
             "type": "titleParagraph",
             "id": "ux",
-            "label": "UX",
+            "label": "Process de design",
+            "showSection": true,
             "title": "Expérience Utilisateur",
             "paragraph": "Nous avons pensé l'application autour d'une fonctionnalité centrale : la découverte d'1 artiste aléatoire par jour. </br></br> Cartographie/Wireframes"
             },
@@ -190,8 +194,6 @@
             },
             {
             "type": "titleParagraph",
-            "id": "da",
-            "label": "DA",
             "title": "Moodboard",
             "paragraph": "Inspiré de l'ambiance studio d’enregistrement"
             },
@@ -203,7 +205,7 @@
             },
             {
             "type": "titleParagraph",
-            "title": "DA",
+            "title": "Identité graphique",
             "paragraph": "..."
             },
             {
@@ -226,36 +228,6 @@
             },
             {
             "type": "titleParagraph",
-            "id": "ui",
-            "label": "UI",
-            "title": "UI",
-            "paragraph": "..."
-            },
-            {
-            "type": "image",
-            "src": "/projectsAssets/coolisses/ui.png",
-            "caption": "...",
-            "size": "full"
-            },
-            {
-            "type": "titleParagraph",
-            "id": "tests",
-            "label": "Tests Utilisateurs",
-            "title": "Tests Utilisateurs",
-            "paragraph": "Bla bla bla écriture bla bla. Ces tests nous ont permis entre autre de nous rendre compte que des tutoriels étaient nécessaires pour expliquer certaines interactions à l'utilisateur."
-            },
-            {
-            "type": "video",
-            "src": "/projectsAssets/coolisses/tuto-with-bg.mp4",
-            "poster": "/projectsAssets/coolisses/tuto-poster.png",
-            "caption": "Tutoriel expliquant les interactions.",
-            "autoplay": true,
-            "loop": true
-            },
-            {
-            "type": "titleParagraph",
-            "id": "studio",
-            "label": "Coolisses Studio",
             "title": "Coolisses Studio",
             "paragraph": "..."
             },
@@ -269,8 +241,39 @@
             },
             {
             "type": "titleParagraph",
+            "id": "prototype",
+            "label": "Prototype",
+            "showSection": true,
+            "title": "Une application de découverte...",
+            "paragraph": "..."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/ui.png",
+            "caption": "...",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "id": "tests",
+            "label": "Tests d'utilisabilité",
+            "showSection": true,
+            "title": "Tests d'utilisabilité",
+            "paragraph": "Bla bla bla écriture bla bla. Ces tests nous ont permis entre autre de nous rendre compte que des tutoriels étaient nécessaires pour expliquer certaines interactions à l'utilisateur."
+            },
+            {
+            "type": "video",
+            "src": "/projectsAssets/coolisses/tuto-with-bg.mp4",
+            "poster": "/projectsAssets/coolisses/tuto-poster.png",
+            "caption": "Tutoriel expliquant les interactions.",
+            "autoplay": true,
+            "loop": true
+            },
+            {
+            "type": "titleParagraph",
             "id": "bilan",
             "label": "Bilan",
+            "showSection": true,
             "title": "Bilan",
             "paragraph": "..."
             }
