@@ -107,7 +107,7 @@
             "paragraph": "Coolisses, c'est l'application intimiste qui vous fait <mark>découvrir des artistes émergents via leur processus de création</mark> tout en vous permettant de prendre le temps de créer un lien particulier avec eux.",
             "timeline": "1 mois",
             "team": "Designers : Lou CARDON </br> Développeurs : Françoise PHAM, César SAINT-LO",
-            "role": "Participation à la création du concept </br> Participation au design de l'expérience et de l'interface utilisateur",
+            "role": "Participation à la création du concept </br> Participation au design et au prototypage de l'expérience et de l'interface utilisateur </br> Rédaction et animation des tests d’utilisabilité",
             "tools": ["Figma"]
             },
             {
@@ -115,15 +115,15 @@
             "id": "brief",
             "label": "Brief",
             "showSection": true,
-            "title": "Le sujet de ce projet",
-            "paragraph": "ici le brief ..."
+            "title": "Concevoir une application...",
+            "paragraph": "Pour ce projet, nous devions concevoir une application avec <mark>des interactions innovantes.</mark> Nous devions partir d'un type d'applications du quotidien, les applications de musique, et créer un concept qui génère une <mark>nouvelle manière d'appréhender le sujet</mark> pour l'utilisateur."
             },
             {
             "type": "titleParagraph",
             "id": "benchmark",
             "label": "Benchmark",
             "showSection": true,
-            "title": "Les applications de musique",
+            "title": "Les applications de musique, notre analyse",
             "paragraph": "En analysant les applications de musiques les plus connues, on s'est rendu compte que beaucoup étaient <mark>centrées sur le player</mark> et qu'elles <mark>recommandaient quasiment uniquement des artistes déjà connus.</mark> </br></br>Par ailleurs, on a trouvé que les suggestions étaient <mark>particulièrement dépendantes de la consommation existante</mark> de musique de l'utilisateur, <mark>l'empêchant de sortir de sa zone de confort</mark> et d'expérimenter de nouveaux genres ou artistes."
             },
             {
@@ -134,7 +134,7 @@
             },
             {
             "type": "titleParagraph",
-            "title": "Problématique",
+            "title": "Problématiser le sujet",
             "paragraph": "Nous nous sommes ainsi demandé <mark>comment nous pourrions élargir nos horizons musicaux</mark> alors même que les applications de players nous gardent volontairement dans une bulle d'écho musicale."
             },
             {
@@ -142,7 +142,7 @@
             "id": "concept",
             "label": "Concept",
             "showSection": true,
-            "title": "Pitch",
+            "title": "Le pitch",
             "paragraph": "Le concept que nous avons tiré de cette problématique consiste à faire découvrir aux amateurs de musique des <mark>jeunes artistes</mark> <mark>via leur processus de création</mark> grâce à une <mark>application intimiste</mark> qui permet de <mark>prendre son temps et de créer un lien spécial avec les artistes.</mark>"
             },
             {
@@ -153,7 +153,7 @@
             },
             {
             "type": "titleParagraph",
-            "title": "Publics cibles",
+            "title": "Les publics cibles",
             "paragraph": "L'application s'adresse ainsi tout autant aux <mark>amateurs de musiques</mark> qu'aux <mark>artistes musicaux émergents,</mark> permettant au premier de découvrir des nouveaux artistes et au second de se faire connaître."
             },
             {
@@ -164,12 +164,12 @@
             },
             {
             "type": "titleParagraph",
-            "title": "Type de contenus",
+            "title": "Quel type de contenu ?",
             "paragraph": "Nous nous sommes inspirés et avons pensé cette application pour qu'elle puisse accueillir des contenus d'un certain type : des <mark>contenus verticaux, relativement courts, montrant les coulisses des artistes</mark> notamment leur processus de création musicale."
             },
             {
             "type": "titleParagraph",
-            "title": "Ton",
+            "title": "Une tonalité particulière",
             "paragraph": "Nous avons voulu que cette application permette une expérience <mark>intimiste</mark> tout en étant <mark>respectueuse,</mark> faite <mark>d'information douce</mark> et <mark>d'exploration contemplative.</mark> </br></br> Pour cela, nous nous sommes inspirés de plusieurs applications qui incarnent certains de ces principes, notamment des applis de méditations."
             },
             {
@@ -180,11 +180,16 @@
             },
             {
             "type": "titleParagraph",
+            "title": "Étendue du projet",
+            "paragraph": "Notre concept prévoit 2 applications : la première à destination du grand public pour lui permettre de découvrir des nouveaux artistes, la deuxième à destination des artistes eux même pour pouvoir partager leurs contenus.</br></br> Étant donné la durée limitée de ce projet, nous nous sommes concentré sur l'application grand public, celle-ci étant la plus à même d'illustrer notre concept."
+            },
+            {
+            "type": "titleParagraph",
             "id": "ux",
             "label": "Process de design",
             "showSection": true,
             "title": "Expérience Utilisateur",
-            "paragraph": "Nous avons pensé l'application autour d'une fonctionnalité centrale : la découverte d'1 artiste aléatoire par jour. </br></br> Cartographie/Wireframes"
+            "paragraph": "Nous avons pensé l'application autour d'une fonctionnalité centrale : la découverte d'un artiste aléatoire par jour. </br></br> Cartographie/Wireframes"
             },
             {
             "type": "image",
@@ -258,8 +263,13 @@
             "id": "tests",
             "label": "Tests d'utilisabilité",
             "showSection": true,
-            "title": "Tests d'utilisabilité",
-            "paragraph": "Bla bla bla écriture bla bla. Ces tests nous ont permis entre autre de nous rendre compte que des tutoriels étaient nécessaires pour expliquer certaines interactions à l'utilisateur."
+            "title": "Rédaction et passation des tests",
+            "paragraph": "Bla bla bla écriture bla bla. Bla bla passation."
+            },
+            {
+            "type": "titleParagraph",
+            "title": "Conclusions des tests",
+            "paragraph": "Ces tests nous ont permis de nous rendre compte que certaines interactions un peu différentes des standards n'étaient pas forcément toujours intuitives pour les utilisateurs et que des tutoriels les expliquant étaient nécessaires."
             },
             {
             "type": "video",
