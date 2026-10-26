@@ -189,12 +189,22 @@
             "label": "Process de design",
             "showSection": true,
             "title": "Expérience Utilisateur",
-            "paragraph": "Nous avons pensé l'application autour d'une fonctionnalité centrale : la découverte d'un artiste aléatoire par jour. </br></br> Cartographie/Wireframes"
+            "paragraph": "Nous avons pensé l'application autour d'<mark>une fonctionnalité centrale</mark> : la découverte d'<mark>un artiste aléatoire par jour.</mark> </br></br> Nous avons commencer par <mark>cartographie les fonctionnalités</mark> que l'on voulait développer pour mener à bien notre concept et vision."
+            },
+            {
+            "type": "image",
+            "src": "/projectsAssets/coolisses/userflow.png",
+            "caption": "Cartographie des écrans et fonctionnalités.",
+            "size": "full"
+            },
+            {
+            "type": "titleParagraph",
+            "paragraph": "Nous nous sommes ensuite appuyé sur celle-ci pour réaliser des <mark>wireframes,</mark> illustrant le positionnement des éléments dans les écrans de l'application."
             },
             {
             "type": "image",
             "src": "/projectsAssets/coolisses/wireframes.png",
-            "caption": "...",
+            "caption": "Les wireframes des écrans de l'application.",
             "size": "full"
             },
             {
