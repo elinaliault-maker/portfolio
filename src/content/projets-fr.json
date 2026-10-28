@@ -114,7 +114,6 @@
             "type": "titleParagraph",
             "id": "brief",
             "label": "Brief",
-            "showSection": true,
             "title": "Concevoir une application...",
             "paragraph": "Pour ce projet, nous devions concevoir une application avec <mark>des interactions innovantes.</mark> Nous devions partir d'un type d'applications du quotidien, les applications de musique, et créer un concept qui génère une <mark>nouvelle manière d'appréhender le sujet</mark> pour l'utilisateur."
             },
@@ -122,7 +121,6 @@
             "type": "titleParagraph",
             "id": "benchmark",
             "label": "Benchmark",
-            "showSection": true,
             "title": "Les applications de musique, notre analyse",
             "paragraph": "En analysant les applications de musiques les plus connues, on s'est rendu compte que beaucoup étaient <mark>centrées sur le player</mark> et qu'elles <mark>recommandaient quasiment uniquement des artistes déjà connus.</mark> </br></br>Par ailleurs, on a trouvé que les suggestions étaient <mark>particulièrement dépendantes de la consommation existante</mark> de musique de l'utilisateur, <mark>l'empêchant de sortir de sa zone de confort</mark> et d'expérimenter de nouveaux genres ou artistes."
             },
@@ -141,7 +139,6 @@
             "type": "titleParagraph",
             "id": "concept",
             "label": "Concept",
-            "showSection": true,
             "title": "Le pitch",
             "paragraph": "Le concept que nous avons tiré de cette problématique consiste à faire découvrir aux amateurs de musique des <mark>jeunes artistes</mark> <mark>via leur processus de création</mark> grâce à une <mark>application intimiste</mark> qui permet de <mark>prendre son temps et de créer un lien spécial avec les artistes.</mark>"
             },
@@ -187,7 +184,6 @@
             "type": "titleParagraph",
             "id": "ux",
             "label": "Process de design",
-            "showSection": true,
             "title": "Expérience Utilisateur",
             "paragraph": "Nous avons pensé l'application autour d'<mark>une fonctionnalité centrale</mark> : la découverte d'<mark>un artiste aléatoire par jour.</mark> </br></br> Nous avons commencer par <mark>cartographie les fonctionnalités</mark> que l'on voulait développer pour mener à bien notre concept et vision."
             },
@@ -258,7 +254,6 @@
             "type": "titleParagraph",
             "id": "prototype",
             "label": "Prototype",
-            "showSection": true,
             "title": "Une application de découverte...",
             "paragraph": "..."
             },
@@ -272,7 +267,6 @@
             "type": "titleParagraph",
             "id": "tests",
             "label": "Tests d'utilisabilité",
-            "showSection": true,
             "title": "Rédaction et passation des tests",
             "paragraph": "Bla bla bla écriture bla bla. Bla bla passation."
             },
@@ -293,7 +287,6 @@
             "type": "titleParagraph",
             "id": "bilan",
             "label": "Bilan",
-            "showSection": true,
             "title": "Bilan",
             "paragraph": "..."
             }
@@ -322,14 +315,14 @@
             "type": "titleParagraph",
             "id": "brief",
             "label": "Brief",
-            "title": "Brief",
+            "title": "Attendus de l'exercice",
             "paragraph": "En dernière année de DNMADE, il était demandé d'écrire un <mark>mémoire d'environ 15 000 caractères,</mark> sur un sujet choisi en rapport avec la spécialité. Le mémoire devait ensuite être présenté à l'oral devant un jury."
             },
             {
             "type": "titleParagraph",
             "id": "memoire",
             "label": "Mémoire",
-            "title": "Mon Mémoire",
+            "title": "Livret de présentation",
             "paragraph": "Pour cet exercice, j'ai choisi de parler des <mark>supports de communication utilisés par les mouvements sociaux et leurs évolutions depuis l’avènement d'internet.</mark> Pour en savoir plus, découvre ci-dessous mon mémoire :"
             },
             {
@@ -364,7 +357,7 @@
             "type": "titleParagraph",
             "id": "research",
             "label": "Recherche",
-            "title": "Recherche",
+            "title": "La symbolique du violet",
             "paragraph": "Pour commercer, nous avons rassemblé tout les éléments qui nous <mark>faisais penser au violet</mark> et à sa symbolique."
             },
             {
@@ -377,7 +370,7 @@
             "type": "titleParagraph",
             "id": "ideation",
             "label": "Idéation",
-            "title": "Idéation",
+            "title": "Illustrer une symbolique",
             "paragraph": "En s'appuyant sur les différentes symboliques du violet, nous avons cherché <mark>différentes idées de représentations visuelles.</mark> Quatres scènes en sont ressorties, que nous avons ensuite tournées."
             },
             {
@@ -394,7 +387,7 @@
             "type": "titleParagraph",
             "id": "assembly",
             "label": "Montage",
-            "title": "Montage",
+            "title": "Assembler les éléments",
             "paragraph": "Une fois le tournage terminé, j'ai récupéré et trié toutes les <mark>prises</mark> puis je les ai <mark>assemblées</mark>. C'est aussi à ce moment que j'ai réalisé la <mark>sphère magique</mark>. </br>J'ai aussi ajouté les divers petits sons qui permettent de créer une <mark>ambiance sonore</mark> qui vient supporter la représentation visuelle."
             },
             {
@@ -407,7 +400,7 @@
             "type": "titleParagraph",
             "id": "final",
             "label": "Vidéo finale",
-            "title": "Vidéo finale",
+            "title": "Une illustration animée...",
             "paragraph": "Ce processus nous a permis de <mark>représenter la symbolique du violet</mark> via des éléments visuels, animés et sonores, tout en <mark>plongeant le spectateur dans l'univers de cette couleur.</mark>"
             },
             {
@@ -418,8 +411,6 @@
             },
             {
             "type": "titleParagraph",
-            "id": "bilan",
-            "label": "Bilan",
             "title": "Bilan",
             "paragraph": "En réalisant toutes les étapes de la création d'une vidéo, ce projet m'a permis de me rendre compte de tout ce processus tout en me permettant d'approfondir ma maîtrise d'After Effects."
             }
@@ -451,7 +442,7 @@
             "type": "titleParagraph",
             "id": "missions",
             "label": "Missions",
-            "title": "Mes missions",
+            "title": "Livret de présentation",
             "paragraph": "Lors de mon stage à la MAIF, j'ai notamment eu l'opportunité de travailler sur les <mark>librairies de pictogrammes du design system</mark> et de maquetter des <mark>emails commerciaux.</mark> </br></br>Pour en savoir plus sur mes missions, consulte mon rapport de stage :"
             },
             {
