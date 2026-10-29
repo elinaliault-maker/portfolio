@@ -258,10 +258,12 @@
             "paragraph": "..."
             },
             {
-            "type": "image",
-            "src": "/projectsAssets/coolisses/ui.png",
-            "caption": "...",
-            "size": "full"
+            "type": "video",
+            "src": "/projectsAssets/coolisses/prototype-with-bg.mp4",
+            "poster": "/projectsAssets/coolisses/prototype-poster.png",
+            "caption": "Prototype animé de l'application Coolisses.",
+            "autoplay": true,
+            "loop": true
             },
             {
             "type": "titleParagraph",
