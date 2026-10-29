@@ -65,12 +65,6 @@
             "paragraph": "On a fait des recherches graphiques..."
             },
             {
-            "type": "image",
-            "src": "/projectsAssets/cover2.jpg",
-            "caption": "Moodboard",
-            "size": "full"
-            },
-            {
             "type": "titleParagraph",
             "id": "regles",
             "label": "Règles",
